@@ -1,0 +1,20 @@
+{
+  "private": false,
+  "name": "@infinite-automation/emsUi",
+  "version": "4.0.0-SNAPSHOT",
+  "description": "A UI module used in order to monitor microgrids",
+  "main": "web/angular/emsUi.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@infinite-automation/mango-module-tools": "^2.0.5"
+  },
+  "author": "Pier Puccini <pierpuccini@gmail.com>",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierpuccini/ems-ui.git"
+  },
+  "com_infiniteautomation": {
+    "moduleName": "emsUi"
+  }
+}

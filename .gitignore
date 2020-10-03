@@ -5,3 +5,4 @@
 # IntelliJ settings
 *.iml
 .idea
+node_modules
