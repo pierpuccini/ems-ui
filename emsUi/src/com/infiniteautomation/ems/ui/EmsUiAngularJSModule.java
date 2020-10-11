@@ -1,4 +1,4 @@
-package com.infiniteautomation.ems;
+package com.infiniteautomation.ems.ui;
 
 import com.serotonin.m2m2.module.AngularJSModuleDefinition;
 

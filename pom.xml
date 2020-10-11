@@ -63,6 +63,6 @@
         </pluginManagement>
     </build>
     <modules>
-        <module>emsUI</module>
+        <module>emsUi</module>
     </modules>
 </project>
