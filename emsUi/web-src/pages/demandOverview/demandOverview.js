@@ -14,6 +14,10 @@ class DemandOverviewController {
     static get $inject() {
         return [];
     }
+
+    constructor() {
+        this.elementType = 'Bus';
+    }
 }
 
 export default {

@@ -6,11 +6,36 @@
     </md-card-header>
     <md-card-content>
         <div>
-            <img src="../../static/temp-system.png" alt="">
+            <img style="width: 100%;height: 100%;" src="../../static/temp-system.png" alt="">
         </div>
     </md-card-content>
 </md-card>
 <div layout="row">
-    <md-card></md-card>
-    <md-card></md-card>
+    <md-card flex="70">
+        <md-card-header class="ma-background-primary ma-hue-default">
+            <h3 class="ma-no-margin">
+                <span ng-if="!$ctrl.selectedElement" ma-tr="ems.demand.systemData"></span>
+                <span ng-if="$ctrl.selectedElement" ma-tr="ems.demand.elementData"
+                    ma-tr-args="[$ctrl.elementType]"></span>
+            </h3>
+        </md-card-header>
+        <md-card-content>
+            <div layout>
+                <div flex="30">Svg</div>
+                <div flex>info</div>
+            </div>
+        </md-card-content>
+    </md-card>
+    <md-card flex>
+        <md-card-header class="ma-background-primary ma-hue-default">
+            <h3 class="ma-no-margin">
+                <span ma-tr="ems.demand.activeAlarms"></span>
+            </h3>
+        </md-card-header>
+        <md-card-content>
+            <div>
+                activeAlarms
+            </div>
+        </md-card-content>
+    </md-card>
 </div>
