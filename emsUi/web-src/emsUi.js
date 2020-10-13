@@ -7,16 +7,18 @@ import angular from 'angular';
 
 import demandOverview from './pages/demandOverview/demandOverview';
 
+import activeAlarms from './components/activeAlarms/activeAlarms';
+
 // import uberUtilFactory from './services/uberUtil';
 
 import './emsUi.css';
 
 const emsUiModule = angular.module('emsUiModule', ['maUiApp']);
 
+emsUiModule.component('emsDemandOverview', demandOverview);
+emsUiModule.component('emsActiveAlarms', activeAlarms);
+
 // emsUiModule.factory('UberUtil', uberUtilFactory);
-
-emsUiModule.component('uberDemandOverview', demandOverview);
-
 emsUiModule.config([
     'maUiMenuProvider',
     (maUiMenuProvider) => {
@@ -24,7 +26,7 @@ emsUiModule.config([
             {
                 url: '/demand-overview',
                 name: 'ui.demandOverview',
-                template: '<uber-demand-overview></uber-demand-overview>',
+                template: '<ems-demand-overview></ems-demand-overview>',
                 menuHidden: false,
                 menuTr: 'ems.menu.overview',
                 menuIcon: 'bar_chart',
