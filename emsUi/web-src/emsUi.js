@@ -15,7 +15,7 @@ const emsUiModule = angular.module('emsUiModule', ['maUiApp']);
 
 // emsUiModule.factory('UberUtil', uberUtilFactory);
 
-emsUiModule.component('uberdemandOverview', demandOverview);
+emsUiModule.component('uberDemandOverview', demandOverview);
 
 emsUiModule.config([
     'maUiMenuProvider',
