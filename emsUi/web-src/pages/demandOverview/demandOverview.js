@@ -4,6 +4,7 @@
  */
 
 import demandTemplate from './demandOverview.html';
+import systemSvg from '../../static/pf.svg';
 import './demandOverview.css';
 
 class DemandOverviewController {
@@ -16,6 +17,7 @@ class DemandOverviewController {
     }
 
     constructor() {
+        this.systemSvg = systemSvg;
         this.elementType = 'Bus';
     }
 }
