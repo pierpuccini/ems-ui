@@ -26,14 +26,7 @@
      id="defs10" />
   <g
      id="bg">
-    <path
-       d="M 240 600 L 480 600"
-       fill="none"
-       stroke="#000000"
-       stroke-width="2"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="Bus_0006" />
+    <path id="Bus_0006" fill="none" stroke="#000000" stroke-width="2" d="M 240 600 L 480 600" />
     <g
        id="Trf_0005_0006">
       <path
@@ -149,32 +142,11 @@
          d="M 440 620 L 440 640" />
     </g>
     <path id="Line_0006_0012" fill="none" stroke="#000000" d="M 83 320 L 110 320 Q 120 320 125.55 328.32 L 274.45 551.68 Q 280 560 280 570 L 280 597" />
-    <path
-       d="M 79 360 L 79 200"
-       fill="none"
-       stroke="#000000"
-       stroke-width="2"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="Bus_0012" />
+    <path id="Bus_0012" fill="none" stroke="#000000" stroke-width="2" d="M 79 360 L 79 200" />
     <path id="Line_0012_0013" fill="none" stroke="#000000" d="M 83 240 L 110 240 Q 120 240 128 234 L 272 126 Q 280 120 280 110 L 280 83" />
-    <path
-       d="M 240 80 L 400 80"
-       fill="none"
-       stroke="#000000"
-       stroke-width="2"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="Bus_0013" />
+    <path id="Bus_0013" fill="none" stroke="#000000" stroke-width="2" d="M 240 80 L 400 80" />
     <path id="Line_0006_0013" fill="none" stroke="#000000"  d="M 320 83 L 320 597" />
-    <path
-       d="M 720 320 L 560 320"
-       fill="none"
-       stroke="#000000"
-       stroke-width="2"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="Bus_0011" />
+    <path id="Bus_0011" fill="none" stroke="#000000" stroke-width="2" d="M 720 320 L 560 320" />
     <path id="Line_0006_0011" fill="none" stroke="#000000" d="M 440 597 L 440 570 Q 440 560 446.25 552.19 L 593.75 367.81 Q 600 360 600 350 L 600 323" />
     <g
        id="Load_0012">
@@ -284,14 +256,7 @@
          fill="none"
          d="M 640 240 L 640 260" />
     </g>
-    <path
-       d="M 920 440 L 760 440"
-       fill="none"
-       stroke="#000000"
-       stroke-width="2"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="Bus_0010" />
+    <path id="Bus_0010" fill="none" stroke="#000000" stroke-width="2" d="M 920 440 L 760 440" />
     <rect
        x="820"
        y="360"
@@ -329,14 +294,7 @@
        pointer-events="all"
        id="path120" />
     <path id="Line_0010_0011" fill="none" stroke="#000000" d="M 680 323 L 680 350 Q 680 360 685.55 368.32 L 754.45 471.68 Q 760 480 770 480 L 790 480 Q 800 480 800 470 L 800 443" />
-    <path
-       d="M 960 560 L 1200 560"
-       fill="none"
-       stroke="#000000"
-       stroke-width="2"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="Bus_0009" />
+    <path id="Bus_0009" fill="none" stroke="#000000" stroke-width="2" d="M 960 560 L 1200 560" />
     <path id="Line_0009_0010" fill="none" stroke="#000000" d="M 880 443 L 880 470 Q 880 480 889.49 483.16 L 990.51 516.84 Q 1000 520 1000 530 L 1000 557" />
     <g id="Trf_0004_0009">
       <path id="path136" stroke="#000000" fill="none" d="M 1000 600 L 1000 563" />
@@ -344,7 +302,7 @@
       <ellipse id="ellipse144" stroke="#000000" fill="none" ry="20" rx="20" cy="620" cx="1000" />
       <ellipse id="ellipse146" stroke="#000000" fill="none" ry="20" rx="20" cy="640" cx="1000" />
     </g>
-    <path id="Bus_0014"  fill="none" stroke="#000000" stroke-width="2" d="M 880 200 L 720 200" />
+    <path id="Bus_0014" fill="none" stroke="#000000" stroke-width="2" d="M 880 200 L 720 200" />
     <g id="Load_0014">
       <path id="path154" stroke="#000000" fill="none" d="M 800 180 L 800 200 L 800 180 L 800 197" />
       <path id="path160" transform="rotate(-180,800,150)" stroke="#000000" fill="none" d="M 780 140 L 800 180 L 820 140 Z" />
