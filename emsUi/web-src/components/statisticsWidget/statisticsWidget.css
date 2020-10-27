@@ -1,0 +1,11 @@
+ems-statistics-widget .ems-statistics-chart {
+    min-height: 250px !important;
+}
+
+ems-statistics-widget .ems-no-layout-margin {
+    margin: unset !important;
+}
+
+ems-statistics-widget md-input-container {
+    width: 100%;
+}
