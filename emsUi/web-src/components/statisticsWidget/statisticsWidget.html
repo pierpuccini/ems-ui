@@ -2,8 +2,8 @@
     <!-- Input Point-->
     <div flex="100" layout="column" layout-align="space-between stretch" layout-gt-sm="row"
         layout-align-gt-sm="start center" layout-margin>
-        <div class="edc-no-layout-margin" flex="100" flex-gt-sm="45" flex-gt-md="35">
-            <md-input-container flex="100">
+        <div class="ems-no-layout-margin" layout layout-align="space-between center" flex="100">
+            <md-input-container flex>
                 <label ma-tr="ems.statistics.selectAvailableDataPoint"></label>
                 <ma-drop-down-button>
                     <span class="ma-ellipsis">
@@ -35,6 +35,9 @@
                     </ma-drop-down>
                 </ma-drop-down-button>
             </md-input-container>
+            <md-button class="md-icon-button" flex="none" ng-click="$ctrl.showSettings = !$ctrl.showSettings">
+                <md-icon>settings</md-icon>
+            </md-button>
         </div>
     </div>
     <!-- Div Show Chart-->
