@@ -1,35 +1,34 @@
 <div layout="column" layout-align="space-between stretch" layout-gt-sm="{{$ctrl.column ? 'column' : 'row'}}">
     <!-- Input Point-->
-    <div flex="100" layout="column" layout-align="space-between stretch" layout-gt-sm="row" layout-align-gt-sm="start center" layout-margin>
+    <div flex="100" layout="column" layout-align="space-between stretch" layout-gt-sm="row"
+        layout-align-gt-sm="start center" layout-margin>
         <div class="edc-no-layout-margin" flex="100" flex-gt-sm="45" flex-gt-md="35">
             <md-input-container flex="100">
-                <label ma-tr="edc.selectAvailableDataPoint"></label>
+                <label ma-tr="ems.statistics.selectAvailableDataPoint"></label>
                 <ma-drop-down-button>
                     <span class="ma-ellipsis">
                         <span ng-repeat="point in $ctrl.selectedPoints" ng-if="point">
-                            <span>{{point.name}}</span>
-
+                            <span>{{point.deviceName}}</span>
+                            <em ng-if="!$ctrl.hideName">({{point.name}})</em>
                             <span ng-if="!$last">,</span>
                         </span>
                     </span>
                     <ma-drop-down auto-focus="::false">
-                        <ma-option-list
-                            name="selectedPoint"
-                            ng-model="$ctrl.selectedPoints"
-                            ng-multiple="true"
-                            ng-change="$ctrl.buildSettings()"
-                            items="$ctrl.getPoints($filter)"
-                            ma-configure-input-container
-                        >
+                        <ma-option-list name="selectedPoint" ng-model="$ctrl.selectedPoints" ng-multiple="true"
+                            ng-change="$ctrl.buildSettings()" items="$ctrl.getPoints($filter)"
+                            ma-configure-input-container>
                             <ma-option ng-if="!$filter" ng-value="'clear'">
                                 <md-icon>clear</md-icon>
-                                <em class="ma-ellipsis" ma-tr="edc.clear"></em>
+                                <em class="ma-ellipsis" ma-tr="ems.common.clear"></em>
                             </ma-option>
 
                             <ma-option ng-repeat="point in $items track by point.xid" ng-value="point">
                                 <md-icon ng-if="$multiple" class="ma-selected-show">check</md-icon>
                                 <span class="ma-ellipsis">
-                                    <span md-highlight-text="$filter" md-highlight-flags="ig">{{point.name}}</span>
+                                    <span md-highlight-text="$filter"
+                                        md-highlight-flags="ig">{{point.deviceName}}</span>
+                                    <em md-highlight-text="$filter" md-highlight-flags="ig"
+                                        ng-if="!$ctrl.hideName">({{point.name}})</em>
                                 </span>
                             </ma-option>
                         </ma-option-list>
@@ -53,12 +52,14 @@
 
                 <md-input-container flex>
                     <label ma-tr="ui.app.lineColor"></label>
-                    <input ma-empty-input="undefined" ng-model="point.chartColour" ng-model-options="{debounce: 1000}" ng-change="$ctrl.editSettings(point)" />
+                    <input ma-empty-input="undefined" ng-model="point.chartColour" ng-model-options="{debounce: 1000}"
+                        ng-change="$ctrl.editSettings(point)" />
                 </md-input-container>
 
                 <md-input-container flex>
                     <label ma-tr="ui.app.chartType"></label>
-                    <md-select ma-empty-input="undefined" ng-model="point.plotType" ng-change="$ctrl.editSettings(point)">
+                    <md-select ma-empty-input="undefined" ng-model="point.plotType"
+                        ng-change="$ctrl.editSettings(point)">
                         <md-option value=""><em ma-tr="ui.app.clear"></em></md-option>
                         <md-option value="SPLINE" ma-tr="ui.app.smooth"></md-option>
                         <md-option value="LINE" ma-tr="ui.app.line"></md-option>
@@ -69,7 +70,8 @@
 
                 <md-input-container flex>
                     <label ma-tr="ui.app.pointAxis"></label>
-                    <md-select ma-empty-input="undefined" ng-model="point.valueAxis" ng-change="$ctrl.editSettings(point)">
+                    <md-select ma-empty-input="undefined" ng-model="point.valueAxis"
+                        ng-change="$ctrl.editSettings(point)">
                         <md-option value=""><em ma-tr="ui.app.clear"></em></md-option>
                         <md-option ng-repeat="axis in $ctrl.axisOptions track by axis.name" ng-value="axis.name">
                             <span ma-tr="{{axis.translation}}"></span>
@@ -81,29 +83,15 @@
         </div>
     </div>
     <div flex="noshrink" layout="column" layout-align="center center">
-        <div ng-show="!$ctrl.checkSelectedPoints()" ma-tr="edc.pleaseSelectaPointDisplayStatistics"></div>
-        <ma-point-values
-            points="$ctrl.selectedPoints"
-            values="$ctrl.combined"
-            from="$ctrl.dateBar.from"
-            to="$ctrl.dateBar.to"
-            rollup="{{$ctrl.dateBar.rollupType}}"
-            rollup-interval="{{$ctrl.dateBar.rollupIntervals}} {{$ctrl.dateBar.rollupIntervalPeriod}}"
-            rendered="true"
-            converted="true"
-            simplify-tolerance="$ctrl.dateBar.simplifyTolerance"
-        >
+        <div ng-show="!$ctrl.checkSelectedPoints()" ma-tr="ems.statistics.pleaseSelectaPointDisplayStatistics"></div>
+        <ma-point-values points="$ctrl.selectedPoints" values="$ctrl.combined" from="$ctrl.dateBar.from"
+            to="$ctrl.dateBar.to" rollup="{{$ctrl.dateBar.rollupType}}"
+            rollup-interval="{{$ctrl.dateBar.rollupIntervals}} {{$ctrl.dateBar.rollupIntervalPeriod}}" rendered="true"
+            converted="true" simplify-tolerance="$ctrl.dateBar.simplifyTolerance">
         </ma-point-values>
-        <ma-serial-chart
-            style="height: 100%; width: 100%;"
-            class="edc-statistics-chart"
-            ng-show="$ctrl.checkSelectedPoints()"
-            legend="true"
-            points="$ctrl.selectedPoints"
-            values="$ctrl.combined"
-            graph-options="$ctrl.graphOptions"
-            export="!$ctrl.hideExport"
-        >
+        <ma-serial-chart style="height: 100%; width: 100%;" class="ems-statistics-chart"
+            ng-show="$ctrl.checkSelectedPoints()" legend="true" points="$ctrl.selectedPoints" values="$ctrl.combined"
+            graph-options="$ctrl.graphOptions" export="!$ctrl.hideExport">
         </ma-serial-chart>
     </div>
 </div>

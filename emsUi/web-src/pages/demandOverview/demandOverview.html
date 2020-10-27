@@ -1,22 +1,10 @@
-<md-card>
-    <md-card-header class="ma-background-primary ma-hue-default">
-        <h3 class="ma-no-margin">
-            <span ma-tr="ems.demand.svgTitle"></span>
-        </h3>
-    </md-card-header>
-    <md-card-content>
-        <div>
-            <ma-svg ng-include="$ctrl.systemSvg"></ma-svg>
-            <!-- <img style="width: 100%;height: 100%;" src="../../static/temp-system.png" alt=""> -->
-        </div>
-    </md-card-content>
-</md-card>
 <div layout="row">
-    <md-card flex="70">
+    <md-card flex="20">
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ng-if="!$ctrl.selectedElement" ma-tr="ems.demand.systemData"></span>
-                <span ng-if="$ctrl.selectedElement" ma-tr="ems.demand.elementData" ma-tr-args="[$ctrl.elementType]"></span>
+                <span ng-if="$ctrl.selectedElement" ma-tr="ems.demand.elementData"
+                    ma-tr-args="[$ctrl.elementType]"></span>
             </h3>
         </md-card-header>
         <md-card-content>
@@ -26,7 +14,19 @@
             </div>
         </md-card-content>
     </md-card>
-    <md-card flex>
+    <md-card flex="60">
+        <md-card-header class="ma-background-primary ma-hue-default">
+            <h3 class="ma-no-margin">
+                <span ma-tr="ems.demand.svgTitle"></span>
+            </h3>
+        </md-card-header>
+        <md-card-content>
+            <div>
+                <ma-svg ng-include="$ctrl.systemSvg"></ma-svg>
+            </div>
+        </md-card-content>
+    </md-card>
+    <md-card flex="20">
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ma-tr="ems.demand.activeAlarms"></span>
@@ -39,17 +39,13 @@
         </md-card-content>
     </md-card>
 </div>
-<div layout="row">
-    <md-card flex="100">
-        <md-card-header class="ma-background-primary ma-hue-default">
-            <h3 class="ma-no-margin">
-                <span ng-if="!$ctrl.selectedElement" ma-tr="ems.demand.statistics"></span>
-            </h3>
-        </md-card-header>
-        <md-card-content>
-            <div layout>
-                <ems-statistics-widget column="true"></ems-statistics-widget>
-            </div>
-        </md-card-content>
-    </md-card>
-</div>
+<md-card>
+    <md-card-header class="ma-background-primary ma-hue-default">
+        <h3 class="ma-no-margin">
+            <span ng-if="!$ctrl.selectedElement" ma-tr="ems.demand.statistics"></span>
+        </h3>
+    </md-card-header>
+    <md-card-content>
+        <ems-statistics-widget column="true"></ems-statistics-widget>
+    </md-card-content>
+</md-card>
