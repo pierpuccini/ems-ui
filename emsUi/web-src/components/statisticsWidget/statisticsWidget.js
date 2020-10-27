@@ -174,7 +174,8 @@ class StatisticsWidgetController {
 export default {
     bindings: {
         defaultPoints: '<?',
-        column: '<?'
+        column: '<?',
+        showSettings: '<?'
     },
     controller: StatisticsWidgetController,
     template

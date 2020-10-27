@@ -40,7 +40,7 @@
     <!-- Div Show Chart-->
 
     <div flex="100" flex-gt-sm="30" layout="column" layout-align="start stretch">
-        <div ng-if="$ctrl.hideSettings === 'true'" ng-repeat="point in $ctrl.selectedPoints track by point.xid">
+        <div ng-if="!$ctrl.showSettings" ng-repeat="point in $ctrl.selectedPoints track by point.xid">
             <div layout layout-align="start center" layout-wrap>
                 <div flex="100" flex-gt-md="50">
                     <strong ng-bind="point.name"></strong>
