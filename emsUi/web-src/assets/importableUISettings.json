@@ -1,0 +1,15 @@
+{
+    "jsonData": [
+        {
+            "xid": "mangoUI-settings",
+            "jsonData": "{\"logoSrc\":\"/rest/latest/file-stores/public/logouninorte.png\",\"defaultTheme\":\"mangoLight2020\",\"usePreferredColorScheme\":false,\"alternateTheme\":\"mangoDark\",\"pwaManifest\":{\"theme_color\":\"rgba(7, 54, 80, 1)\",\"background_color\":\"rgba(250, 253, 255, 1)\"}}",
+            "readPermission": [
+                [
+                    "user"
+                ]
+            ],
+            "name": "UI Settings",
+            "editPermission": []
+        }
+    ]
+}
