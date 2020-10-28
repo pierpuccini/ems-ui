@@ -72,7 +72,7 @@ class StatisticsWidgetController {
     }
 
     getPoints(filter) {
-        const pointQuery = this.maPoint.buildQuery();
+        const pointQuery = this.maPoint.buildQuery().eq('enabled', true);
         // .buildQuery().eq('tags.equipmentType', this.equipmentType).eq('tags.site', this.siteXid);
 
         return pointQuery
