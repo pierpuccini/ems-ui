@@ -27,10 +27,18 @@ class DemandOverviewController {
     getPoints() {
         this.maPoint
             .buildQuery()
+            .eq('enabled', true)
             .query()
             .then((points) => {
                 this.points = points;
             });
+    }
+
+    setElement(el) {
+        this.element = el;
+        const filteredPoints = this.points.filter((point) => point.deviceName === el);
+        const defaultPoints = filteredPoints.map((point) => point.name);
+        this.defaultPoints = [el, ...defaultPoints];
     }
 }
 

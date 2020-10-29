@@ -1,0 +1,23 @@
+ems-point-display p,
+ems-point-display h4 {
+    margin: 0;
+    line-height: 12px;
+}
+
+ems-point-display h4 {
+    color: var(--ma-foreground-2);
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+ems-point-display p {
+    margin-top: 12px;
+    font-size: small;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+}
+
+ems-point-display .ed-margin-bottom {
+    margin-bottom: 8px;
+}

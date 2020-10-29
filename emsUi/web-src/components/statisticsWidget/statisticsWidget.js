@@ -41,19 +41,11 @@ class StatisticsWidgetController {
         this.showSensorXid = false;
     }
 
-    // $onChanges(changes) {
-    //     if ((changes.pqm && changes.pqm.currentValue) || (changes.pdu && changes.pdu.currentValue)) {
-    //         this.selectedPoints = [];
-    //         this.settings = {};
-    //     }
-    //     if (changes.siteXid && changes.siteXid.currentValue) {
-    //         this.siteXid = changes.siteXid.currentValue;
-
-    //         if (this.defaultPoints) {
-    //             this.setDefaultPoints(true);
-    //         }
-    //     }
-    // }
+    $onChanges(changes) {
+        if (changes.defaultPoints && changes.defaultPoints.currentValue && changes.defaultPoints.currentValue.length > 0) {
+            this.setDefaultPoints(true);
+        }
+    }
 
     $onInit() {
         if (this.defaultPoints) {
@@ -63,8 +55,10 @@ class StatisticsWidgetController {
 
     setDefaultPoints(showSensorXid) {
         if (this.defaultPoints.length > 0) {
+            const [element] = this.defaultPoints;
+            this.defaultPoints.shift();
             this.getPoints().then((points) => {
-                this.selectedPoints = points.filter((point) => this.defaultPoints.includes(point.name));
+                this.selectedPoints = points.filter((point) => this.defaultPoints.includes(point.name) && point.deviceName === element);
                 this.buildSettings();
             });
             this.showSensorXid = showSensorXid;

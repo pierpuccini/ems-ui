@@ -1,33 +1,33 @@
 <div>
     <ma-get-point-value points="$ctrl.points"></ma-get-point-value>
     <ma-svg ng-include="$ctrl.systemSvg">
-        <div ma-selector="#Bus_0006" class="{{$ctrl.svgColorFill('Bus_0006')}}"></div>
-        <div ma-selector="#Bus_0007" class="{{$ctrl.svgColorFill('Bus_0007')}}"></div>
-        <div ma-selector="#Bus_0008" class="{{$ctrl.svgColorFill('Bus_0008')}}"></div>
-        <div ma-selector="#Bus_0009" class="{{$ctrl.svgColorFill('Bus_0009')}}"></div>
-        <div ma-selector="#Bus_0010" class="{{$ctrl.svgColorFill('Bus_0010')}}"></div>
-        <div ma-selector="#Bus_0011" class="{{$ctrl.svgColorFill('Bus_0011')}}"></div>
-        <div ma-selector="#Bus_0012" class="{{$ctrl.svgColorFill('Bus_0012')}}"></div>
-        <div ma-selector="#Bus_0013" class="{{$ctrl.svgColorFill('Bus_0013')}}"></div>
-        <div ma-selector="#Bus_0014" class="{{$ctrl.svgColorFill('Bus_0014')}}"></div>
-        <div ma-selector="#Line_0006_0011" class="{{$ctrl.svgColorFill('Line_0006_0011')}}"></div>
-        <div ma-selector="#Line_0006_0012" class="{{$ctrl.svgColorFill('Line_0006_0012')}}"></div>
-        <div ma-selector="#Line_0006_0013" class="{{$ctrl.svgColorFill('Line_0006_0013')}}"></div>
-        <div ma-selector="#Line_0009_0010" class="{{$ctrl.svgColorFill('Line_0009_0010')}}"></div>
-        <div ma-selector="#Line_0009_0014" class="{{$ctrl.svgColorFill('Line_0009_0014')}}"></div>
-        <div ma-selector="#Line_0010_0011" class="{{$ctrl.svgColorFill('Line_0010_0011')}}"></div>
-        <div ma-selector="#Line_0012_0013" class="{{$ctrl.svgColorFill('Line_0012_0013')}}"></div>
-        <div ma-selector="#Line_0013_0014" class="{{$ctrl.svgColorFill('Line_0013_0014')}}"></div>
-        <div ma-selector="#Trf_0005_0006" class="{{$ctrl.svgColorFill('Trf_0005_0006')}}"></div>
-        <div ma-selector="#Trf_0007_0009" class="{{$ctrl.svgColorFill('Trf_0007_0009')}}"></div>
-        <div ma-selector="#Trf_0004_0009" class="{{$ctrl.svgColorFill('Trf_0004_0009')}}"></div>
-        <div ma-selector="#Gen_0006" class="{{$ctrl.svgColorFill('Gen_0006')}}"></div>
-        <div ma-selector="#Load_0006" class="{{$ctrl.svgColorFill('Load_0006')}}"></div>
-        <div ma-selector="#Load_0009" class="{{$ctrl.svgColorFill('Load_0009')}}"></div>
-        <div ma-selector="#Load_0010" class="{{$ctrl.svgColorFill('Load_0010')}}"></div>
-        <div ma-selector="#Load_0011" class="{{$ctrl.svgColorFill('Load_0011')}}"></div>
-        <div ma-selector="#Load_0012" class="{{$ctrl.svgColorFill('Load_0012')}}"></div>
-        <div ma-selector="#Load_0013" class="{{$ctrl.svgColorFill('Load_0013')}}"></div>
-        <div ma-selector="#Load_0014" class="{{$ctrl.svgColorFill('Load_0014')}}"></div>
+        <div ma-selector="#Bus_0006" class="{{$ctrl.svgColorFill('Bus_0006')}}" ng-click="$ctrl.selectedElement('Bus_0006')"></div>
+        <div ma-selector="#Bus_0007" class="{{$ctrl.svgColorFill('Bus_0007')}}" ng-click="$ctrl.selectedElement('Bus_0007')"></div>
+        <div ma-selector="#Bus_0008" class="{{$ctrl.svgColorFill('Bus_0008')}}" ng-click="$ctrl.selectedElement('Bus_0008')"></div>
+        <div ma-selector="#Bus_0009" class="{{$ctrl.svgColorFill('Bus_0009')}}" ng-click="$ctrl.selectedElement('Bus_0009')"></div>
+        <div ma-selector="#Bus_0010" class="{{$ctrl.svgColorFill('Bus_0010')}}" ng-click="$ctrl.selectedElement('Bus_0010')"></div>
+        <div ma-selector="#Bus_0011" class="{{$ctrl.svgColorFill('Bus_0011')}}" ng-click="$ctrl.selectedElement('Bus_0011')"></div>
+        <div ma-selector="#Bus_0012" class="{{$ctrl.svgColorFill('Bus_0012')}}" ng-click="$ctrl.selectedElement('Bus_0012')"></div>
+        <div ma-selector="#Bus_0013" class="{{$ctrl.svgColorFill('Bus_0013')}}" ng-click="$ctrl.selectedElement('Bus_0013')"></div>
+        <div ma-selector="#Bus_0014" class="{{$ctrl.svgColorFill('Bus_0014')}}" ng-click="$ctrl.selectedElement('Bus_0014')"></div>
+        <div ma-selector="#Line_0006_0011" class="{{$ctrl.svgColorFill('Line_0006_0011')}}" ng-click="$ctrl.selectedElement('Line_0006_0011')"></div>
+        <div ma-selector="#Line_0006_0012" class="{{$ctrl.svgColorFill('Line_0006_0012')}}" ng-click="$ctrl.selectedElement('Line_0006_0012')"></div>
+        <div ma-selector="#Line_0006_0013" class="{{$ctrl.svgColorFill('Line_0006_0013')}}" ng-click="$ctrl.selectedElement('Line_0006_0013')"></div>
+        <div ma-selector="#Line_0009_0010" class="{{$ctrl.svgColorFill('Line_0009_0010')}}" ng-click="$ctrl.selectedElement('Line_0009_0010')"></div>
+        <div ma-selector="#Line_0009_0014" class="{{$ctrl.svgColorFill('Line_0009_0014')}}" ng-click="$ctrl.selectedElement('Line_0009_0014')"></div>
+        <div ma-selector="#Line_0010_0011" class="{{$ctrl.svgColorFill('Line_0010_0011')}}" ng-click="$ctrl.selectedElement('Line_0010_0011')"></div>
+        <div ma-selector="#Line_0012_0013" class="{{$ctrl.svgColorFill('Line_0012_0013')}}" ng-click="$ctrl.selectedElement('Line_0012_0013')"></div>
+        <div ma-selector="#Line_0013_0014" class="{{$ctrl.svgColorFill('Line_0013_0014')}}" ng-click="$ctrl.selectedElement('Line_0013_0014')"></div>
+        <div ma-selector="#Trf_0005_0006" class="{{$ctrl.svgColorFill('Trf_0005_0006')}}" ng-click="$ctrl.selectedElement('Trf_0005_0006')"></div>
+        <div ma-selector="#Trf_0007_0009" class="{{$ctrl.svgColorFill('Trf_0007_0009')}}" ng-click="$ctrl.selectedElement('Trf_0007_0009')"></div>
+        <div ma-selector="#Trf_0004_0009" class="{{$ctrl.svgColorFill('Trf_0004_0009')}}" ng-click="$ctrl.selectedElement('Trf_0004_0009')"></div>
+        <div ma-selector="#Gen_0006" class="{{$ctrl.svgColorFill('Gen_0006')}}" ng-click="$ctrl.selectedElement('Gen_0006')"></div>
+        <div ma-selector="#Load_0006" class="{{$ctrl.svgColorFill('Load_0006')}}" ng-click="$ctrl.selectedElement('Load_0006')"></div>
+        <div ma-selector="#Load_0009" class="{{$ctrl.svgColorFill('Load_0009')}}" ng-click="$ctrl.selectedElement('Load_0009')"></div>
+        <div ma-selector="#Load_0010" class="{{$ctrl.svgColorFill('Load_0010')}}" ng-click="$ctrl.selectedElement('Load_0010')"></div>
+        <div ma-selector="#Load_0011" class="{{$ctrl.svgColorFill('Load_0011')}}" ng-click="$ctrl.selectedElement('Load_0011')"></div>
+        <div ma-selector="#Load_0012" class="{{$ctrl.svgColorFill('Load_0012')}}" ng-click="$ctrl.selectedElement('Load_0012')"></div>
+        <div ma-selector="#Load_0013" class="{{$ctrl.svgColorFill('Load_0013')}}" ng-click="$ctrl.selectedElement('Load_0013')"></div>
+        <div ma-selector="#Load_0014" class="{{$ctrl.svgColorFill('Load_0014')}}" ng-click="$ctrl.selectedElement('Load_0014')"></div>
     </ma-svg>
 </div>

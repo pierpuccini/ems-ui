@@ -13,6 +13,8 @@ import statisticsWidget from './components/statisticsWidget/statisticsWidget';
 
 import systemMonitoring from './components/systemMonitoring/systemMonitoring';
 
+import pointDisplay from './components/pointDisplay/pointDisplay';
+
 // import uberUtilFactory from './services/uberUtil';
 
 import './emsUi.css';
@@ -23,6 +25,7 @@ emsUiModule.component('emsDemandOverview', demandOverview);
 emsUiModule.component('emsActiveAlarms', activeAlarms);
 emsUiModule.component('emsStatisticsWidget', statisticsWidget);
 emsUiModule.component('emsSystemMonitoring', systemMonitoring);
+emsUiModule.component('emsPointDisplay', pointDisplay);
 
 // emsUiModule.factory('UberUtil', uberUtilFactory);
 emsUiModule.config([

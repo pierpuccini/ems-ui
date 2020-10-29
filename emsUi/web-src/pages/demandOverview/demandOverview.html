@@ -1,5 +1,5 @@
 <div layout="row">
-    <md-card flex="20">
+    <md-card flex="20" ng-if="$ctrl.element">
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ng-if="!$ctrl.selectedElement" ma-tr="ems.demand.systemData"></span>
@@ -8,19 +8,21 @@
         </md-card-header>
         <md-card-content>
             <div layout>
-                <div flex="30">Svg</div>
-                <div flex>info</div>
+                <!-- <div flex="30">Svg</div> -->
+                <div flex layout-align="center center">
+                    <ems-point-display points="$ctrl.points" element="$ctrl.element"></ems-point-display>
+                </div>
             </div>
         </md-card-content>
     </md-card>
-    <md-card flex="60">
+    <md-card flex>
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ma-tr="ems.demand.svgTitle"></span>
             </h3>
         </md-card-header>
         <md-card-content>
-            <ems-system-monitoring points="$ctrl.points"></ems-system-monitoring>
+            <ems-system-monitoring points="$ctrl.points" send-element="$ctrl.setElement($element)"></ems-system-monitoring>
         </md-card-content>
     </md-card>
     <md-card flex="20">
@@ -43,6 +45,6 @@
         </h3>
     </md-card-header>
     <md-card-content>
-        <ems-statistics-widget showSettings="false" column="true"></ems-statistics-widget>
+        <ems-statistics-widget default-points="$ctrl.defaultPoints" show-settings="false" column="true"></ems-statistics-widget>
     </md-card-content>
 </md-card>

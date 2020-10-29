@@ -83,11 +83,16 @@ class SystemMonitoringController {
         }
         return null;
     }
+
+    selectedElement(value) {
+        this.sendElement({ $element: value });
+    }
 }
 
 export default {
     bindings: {
-        points: '<?'
+        points: '<?',
+        sendElement: '&'
     },
     controller: SystemMonitoringController,
     template: systemMonitoringTemplate
