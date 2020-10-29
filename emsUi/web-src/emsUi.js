@@ -11,6 +11,8 @@ import activeAlarms from './components/activeAlarms/activeAlarms';
 
 import statisticsWidget from './components/statisticsWidget/statisticsWidget';
 
+import systemMonitoring from './components/systemMonitoring/systemMonitoring';
+
 // import uberUtilFactory from './services/uberUtil';
 
 import './emsUi.css';
@@ -20,6 +22,7 @@ const emsUiModule = angular.module('emsUiModule', ['maUiApp']);
 emsUiModule.component('emsDemandOverview', demandOverview);
 emsUiModule.component('emsActiveAlarms', activeAlarms);
 emsUiModule.component('emsStatisticsWidget', statisticsWidget);
+emsUiModule.component('emsSystemMonitoring', systemMonitoring);
 
 // emsUiModule.factory('UberUtil', uberUtilFactory);
 emsUiModule.config([

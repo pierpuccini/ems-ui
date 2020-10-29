@@ -1,0 +1,52 @@
+ems-system-monitoring path.svg-color-fill.bus.ems-green,
+ems-system-monitoring path.svg-color-fill.line.ems-green {
+    stroke: rgb(34, 108, 71) !important;
+    stroke-width: 4px;
+}
+
+ems-system-monitoring path.svg-color-fill.bus.ems-red,
+ems-system-monitoring path.svg-color-fill.line.ems-red {
+    stroke: #f24d4e !important;
+    stroke-width: 4px;
+}
+
+ems-system-monitoring path.svg-color-fill.line.ems-yellow {
+    stroke: #f2e44d !important;
+    stroke-width: 4px;
+}
+
+ems-system-monitoring .svg-color-fill.load.ems-red path,
+ems-system-monitoring .svg-color-fill.gen.ems-red > path,
+ems-system-monitoring .svg-color-fill.gen.ems-red > ellipse,
+ems-system-monitoring .svg-color-fill.trf.ems-red > path,
+ems-system-monitoring .svg-color-fill.trf.ems-red > ellipse {
+    stroke: #f24d4e !important;
+    stroke-width: 4px;
+}
+
+ems-system-monitoring .svg-color-fill.trf.ems-yellow > path,
+ems-system-monitoring .svg-color-fill.trf.ems-yellow > ellipse {
+    stroke: #f2e44d !important;
+    stroke-width: 4px;
+}
+
+ems-system-monitoring .svg-color-fill.load.ems-green path,
+ems-system-monitoring .svg-color-fill.gen.ems-green > path,
+ems-system-monitoring .svg-color-fill.gen.ems-green > ellipse,
+ems-system-monitoring .svg-color-fill.trf.ems-green > path,
+ems-system-monitoring .svg-color-fill.trf.ems-green > ellipse {
+    stroke: rgb(34, 108, 71) !important;
+    stroke-width: 4px;
+}
+
+/* ems-system-monitoring path.svg-color-fill.ems-green,
+ems-system-monitoring .svg-color-fill.ems-green > rect,
+ems-system-monitoring .svg-color-fill.ems-green > path {
+    fill: rgb(34, 108, 71) !important;
+}
+
+ems-system-monitoring path.svg-color-fill.ems-red,
+ems-system-monitoring .svg-color-fill.ems-red > rect,
+ems-system-monitoring .svg-color-fill.ems-red > path {
+    fill: #f24d4e !important;
+} */

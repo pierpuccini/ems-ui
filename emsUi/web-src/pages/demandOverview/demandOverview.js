@@ -4,7 +4,6 @@
  */
 
 import demandTemplate from './demandOverview.html';
-import systemSvg from '../../static/pf.svg';
 import './demandOverview.css';
 
 class DemandOverviewController {
@@ -13,12 +12,25 @@ class DemandOverviewController {
     }
 
     static get $inject() {
-        return [];
+        return ['maPoint'];
     }
 
-    constructor() {
-        this.systemSvg = systemSvg;
+    constructor(maPoint) {
         this.elementType = 'Bus';
+        this.maPoint = maPoint;
+    }
+
+    $onInit() {
+        this.getPoints();
+    }
+
+    getPoints() {
+        this.maPoint
+            .buildQuery()
+            .query()
+            .then((points) => {
+                this.points = points;
+            });
     }
 }
 
