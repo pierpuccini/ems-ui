@@ -1,4 +1,9 @@
+<div>
+    <h3 class="ma-no-margin" ng-bind="$ctrl.element"></h3>
+</div>
 <div ng-repeat="point in $ctrl.selectedPoints track by $index">
-    <div><p>{{point.name}}</p></div>
+    <div>
+        <p>{{point.name}}</p>
+    </div>
     <ma-point-value style="font-size: 12px;" point="point"></ma-point-value>
 </div>
