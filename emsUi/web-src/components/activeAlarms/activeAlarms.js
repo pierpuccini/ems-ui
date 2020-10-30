@@ -25,89 +25,30 @@ class ActiveAlarmsController {
         };
     }
 
-    // $onChanges(changes) {
-    //     if (
-    //         changes.searchOptions &&
-    //         changes.searchOptions.currentValue &&
-    //         changes.searchOptions.currentValue.campus
-    //     ) {
-    //         if (this.activeEvents) {
-    //             this.activeEvents.deregister();
-    //         }
-    //         this.getAlarmCount();
-    //     }
-    // }
+    $onChanges(changes) {
+        if (changes.element && changes.element.currentValue) {
+            if (this.activeEvents) {
+                this.activeEvents.deregister();
+            }
+            this.getAlarmCount();
+        }
+    }
 
-    // $onDestroy() {
-    //     if (this.activeEvents) {
-    //         this.activeEvents.deregister();
-    //     }
-    // }
+    $onDestroy() {
+        if (this.activeEvents) {
+            this.activeEvents.deregister();
+        }
+    }
 
-    // getAlarmCount() {
-    //     const {
-    //         region,
-    //         campus,
-    //         zone,
-    //         row,
-    //         subRow,
-    //         rack,
-    //         busway,
-    //         tb,
-    //         cb
-    //     } = this.searchOptions;
-    //     const activeEventsQuery = this.maEvents.notificationManager
-    //         .buildActiveQuery()
-    //         .eq('eventType.eventType', 'DATA_POINT');
+    getAlarmCount() {
+        const activeEventsQuery = this.maEvents.notificationManager.buildActiveQuery().eq('eventType.eventType', 'DATA_POINT');
 
-    //     if (region) {
-    //         activeEventsQuery.eq(
-    //             'eventType.reference1.tags.region',
-    //             region === 'Global' ? null : region
-    //         );
-    //     }
+        if (this.element) {
+            activeEventsQuery.eq('eventType.reference1.deviceName', this.element);
+        }
 
-    //     if (campus) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.campus', campus);
-    //     }
-
-    //     if (zone) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.zone', zone);
-    //     }
-
-    //     if (row) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.row', row);
-    //     }
-
-    //     if (subRow) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.subRow', subRow);
-    //     }
-
-    //     if (rack) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.rack', rack);
-    //     }
-
-    //     if (busway) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.busway', busway);
-    //     }
-
-    //     if (tb) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.tb', tb);
-    //     }
-
-    //     if (cb) {
-    //         activeEventsQuery.eq('eventType.reference1.tags.cb', cb);
-    //     }
-
-    //     this.activeEvents = activeEventsQuery.activeEvents();
-    // }
-
-    // gotoEvent() {
-    //     this.$state.go('ui.events', {
-    //         location: 'replace',
-    //         notify: true
-    //     });
-    // }
+        this.activeEvents = activeEventsQuery.activeEvents();
+    }
 }
 
 export default {
