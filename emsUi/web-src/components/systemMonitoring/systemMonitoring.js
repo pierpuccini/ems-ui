@@ -19,11 +19,11 @@ class SystemMonitoringController {
     }
 
     constructor($scope, $element, $compile, $filter) {
-        this.systemSvg = systemSvg;
         this.$scope = $scope;
         this.$element = $element;
         this.$compile = $compile;
-        this.maFilter = $filter('maFilter');
+
+        this.systemSvg = systemSvg;
     }
 
     $onInit() {
@@ -98,42 +98,42 @@ class SystemMonitoringController {
     }
 
     createTooltip() {
-        // this.$compile(tooltipTemplate)(this.$scope.$new(), ($element, $scope) => {
-        //     $element.css('visibility', 'hidden');
-        //     $element.addClass('ems-tooltip');
-        //     this.$element.append($element);
-        //     this.tooltipElement = $element;
-        //     this.tooltipScope = $scope;
-        // });
+        this.$compile(tooltipTemplate)(this.$scope.$new(), ($element, $scope) => {
+            $element.css('visibility', 'hidden');
+            $element.addClass('ems-tooltip');
+            this.$element.append($element);
+            this.tooltipElement = $element;
+            this.tooltipScope = $scope;
+        });
     }
 
     showTooltip(event) {
-        if (this.points) {
-            const element = event.split('_');
+        // Object.assign(this.tooltipScope, {
+        //     $point: result
+        // });
 
-            if (element[0] === 'Load') {
-                const elementObject = this.points.reduce((filtered, point) => {
-                    const shortName = point.name;
-                    if (point.tags.load === element[1] && point.tags.element === 'Load' && point.name.indexOf('Active') > -1) {
-                        filtered[shortName] = { point: point };
-                    }
-                    return filtered;
-                }, {});
-                const result = Object.keys(elementObject).map((element) => elementObject[element]);
+        const elementRect = this.$element[0].getBoundingClientRect();
+        const targetRect = event.target.getBoundingClientRect();
+        const x = targetRect.x - elementRect.x + targetRect.width + 5;
+        const y = targetRect.y - elementRect.y;
 
-                // Object.assign(this.tooltipScope, {
-                //     $point: result
-                // });
+        this.tooltipElement.css('transform', `translate(${x}px, ${y}px)`);
+        this.tooltipElement.css('visibility', 'visible');
+        // if (this.points) {
+        //     const element = event.split('_');
 
-                // const elementRect = this.$element[0].getBoundingClientRect();
-                // const targetRect = event.target.getBoundingClientRect();
-                // const x = targetRect.x - elementRect.x + targetRect.width + 5;
-                // const y = targetRect.y - elementRect.y;
+        //     if (element[0] === 'Load') {
+        //         const elementObject = this.points.reduce((filtered, point) => {
+        //             const shortName = point.name;
+        //             if (point.tags.load === element[1] && point.tags.element === 'Load' && point.name.indexOf('Active') > -1) {
+        //                 filtered[shortName] = { point: point };
+        //             }
+        //             return filtered;
+        //         }, {});
+        //         const result = Object.keys(elementObject).map((element) => elementObject[element]);
 
-                // this.tooltipElement.css('transform', `translate(${x}px, ${y}px)`);
-                // this.tooltipElement.css('visibility', 'visible');
-            }
-        }
+        //     }
+        // }
     }
 
     hideTooltip(event) {
