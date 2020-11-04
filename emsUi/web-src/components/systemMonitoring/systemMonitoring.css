@@ -39,6 +39,19 @@ ems-system-monitoring .svg-color-fill.trf.ems-green > ellipse {
     stroke-width: 4px;
 }
 
+ems-system-monitoring > .ems-tooltip {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    border: 1px solid var(--ma-background-contrast);
+    border-radius: 8px;
+    background-color: var(--ma-background);
+    color: var(--ma-background-contrast);
+    font-size: 1.2rem;
+}
+
 /* ems-system-monitoring path.svg-color-fill.ems-green,
 ems-system-monitoring .svg-color-fill.ems-green > rect,
 ems-system-monitoring .svg-color-fill.ems-green > path {
