@@ -15,10 +15,10 @@ class SystemMonitoringController {
     }
 
     static get $inject() {
-        return ['$scope', '$element', '$compile', '$filter'];
+        return ['$scope', '$element', '$compile'];
     }
 
-    constructor($scope, $element, $compile, $filter) {
+    constructor($scope, $element, $compile) {
         this.$scope = $scope;
         this.$element = $element;
         this.$compile = $compile;
@@ -30,14 +30,16 @@ class SystemMonitoringController {
         this.createTooltip();
     }
 
-    svgColorFill(id) {
-        let result = 'svg-color-fill';
+    svgColorFill(details) {
+        const { electrical } = details;
+
+        const result = 'svg-color-fill';
         const successClass = 'ems-green';
         const warningClass = 'ems-yellow';
         const dangerClass = 'ems-red';
         if (this.points) {
-            if (id.includes('Bus')) {
-                const foundPoint = this.points.find((point) => point.deviceName === id && point.name === 'Voltage Magnitude');
+            if (electrical === 'Bus') {
+                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.name === 'Voltage Magnitude');
                 if (foundPoint) {
                     if (foundPoint.value < 0.95 || foundPoint.value > 1.05) {
                         return `${result} bus ${dangerClass}`;
@@ -45,9 +47,9 @@ class SystemMonitoringController {
                     return `${result} bus ${successClass}`;
                 }
             }
-            if (id.includes('Line')) {
-                const pointLoading = this.points.find((point) => point.deviceName === id && point.name === 'Loading');
-                const pointMaxLoading = this.points.find((point) => point.deviceName === id && point.name === 'Max Loading');
+            if (electrical === 'Line') {
+                const pointLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Loading');
+                const pointMaxLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Max Loading');
                 if (pointLoading && pointMaxLoading) {
                     if (pointLoading.value > pointMaxLoading.value) {
                         return `${result} line ${dangerClass}`;
@@ -58,9 +60,9 @@ class SystemMonitoringController {
                     return `${result} line ${successClass}`;
                 }
             }
-            if (id.includes('Trf')) {
-                const pointLoading = this.points.find((point) => point.deviceName === id && point.name === 'Loading');
-                const pointMaxLoading = this.points.find((point) => point.deviceName === id && point.name === 'Max Loading');
+            if (electrical === 'Trf') {
+                const pointLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Loading');
+                const pointMaxLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Max Loading');
                 if (pointLoading && pointMaxLoading) {
                     if (pointLoading.value > pointMaxLoading.value) {
                         return `${result} trf ${dangerClass}`;
@@ -71,8 +73,8 @@ class SystemMonitoringController {
                     return `${result} trf ${successClass}`;
                 }
             }
-            if (id.includes('Gen')) {
-                const foundPoint = this.points.find((point) => point.deviceName === id && point.name === 'Active Power');
+            if (electrical === 'Gen') {
+                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.name === 'Active Power');
                 if (foundPoint) {
                     if (foundPoint.value === 0) {
                         return `${result} gen ${dangerClass}`;
@@ -80,8 +82,8 @@ class SystemMonitoringController {
                     return `${result} gen ${successClass}`;
                 }
             }
-            if (id.includes('Load')) {
-                const foundPoint = this.points.find((point) => point.deviceName === id && point.name === 'Nominal Active Power');
+            if (electrical === 'Load') {
+                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.name === 'Nominal Active Power');
                 if (foundPoint) {
                     if (foundPoint.value === 0) {
                         return `${result} load ${dangerClass}`;
@@ -93,8 +95,31 @@ class SystemMonitoringController {
         return null;
     }
 
-    selectedElement(value) {
+    selectedElement(event) {
+        const { electrical, idOne, idTwo } = this.electricalItem(event.target);
+        let value = `${electrical}_${idOne}`;
+        if (idTwo) {
+            value = `${value}_${idTwo}`;
+        }
         this.sendElement({ $element: value });
+    }
+
+    electricalItem(item) {
+        let { id } = item;
+        let items = id.split('_');
+        if (items[0].includes('path') || items[0].includes('ellipse')) {
+            id = item.parentNode.id;
+            items = id.split('_');
+        }
+        if (items.length <= 2) {
+            const [electrical, idOne] = items;
+            return {
+                electrical,
+                idOne
+            };
+        }
+        const [electrical, idOne, idTwo] = items;
+        return { electrical, idOne, idTwo };
     }
 
     createTooltip() {
@@ -108,36 +133,37 @@ class SystemMonitoringController {
     }
 
     showTooltip(event) {
-        // Object.assign(this.tooltipScope, {
-        //     $point: result
-        // });
+        const { electrical } = this.electricalItem(event.target);
 
-        const elementRect = this.$element[0].getBoundingClientRect();
-        const targetRect = event.target.getBoundingClientRect();
-        const x = targetRect.x - elementRect.x + targetRect.width + 5;
-        const y = targetRect.y - elementRect.y;
+        let pointNames = [];
+        if (this.points) {
+            if (electrical === 'Load') {
+                pointNames = ['Nominal Active Power', 'Load Price'];
+            }
+            const elementObj = this.points.reduce((result, point) => {
+                const shortName = point.name;
+                if (point.tags.element === electrical && pointNames.includes(point.name)) {
+                    result[shortName] = point;
+                }
+                return result;
+            }, {});
 
-        this.tooltipElement.css('transform', `translate(${x}px, ${y}px)`);
-        this.tooltipElement.css('visibility', 'visible');
-        // if (this.points) {
-        //     const element = event.split('_');
+            Object.assign(this.tooltipScope, {
+                $points: elementObj
+            });
 
-        //     if (element[0] === 'Load') {
-        //         const elementObject = this.points.reduce((filtered, point) => {
-        //             const shortName = point.name;
-        //             if (point.tags.load === element[1] && point.tags.element === 'Load' && point.name.indexOf('Active') > -1) {
-        //                 filtered[shortName] = { point: point };
-        //             }
-        //             return filtered;
-        //         }, {});
-        //         const result = Object.keys(elementObject).map((element) => elementObject[element]);
+            const elementRect = this.$element[0].getBoundingClientRect();
+            const targetRect = event.target.getBoundingClientRect();
+            const x = targetRect.x - elementRect.x + targetRect.width + 5;
+            const y = targetRect.y - elementRect.y;
 
-        //     }
-        // }
+            this.tooltipElement.css('transform', `translate(${x}px, ${y}px)`);
+            this.tooltipElement.css('visibility', 'visible');
+        }
     }
 
     hideTooltip(event) {
-        // this.tooltipElement.css('visibility', 'hidden');
+        this.tooltipElement.css('visibility', 'hidden');
     }
 }
 

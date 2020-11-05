@@ -1,7 +1,10 @@
 <div>
     <ma-get-point-value points="$ctrl.points"></ma-get-point-value>
     <ma-svg ng-include="$ctrl.systemSvg">
-        <div ma-selector="#Bus_0006" class="{{$ctrl.svgColorFill('Bus_0006')}}" ng-click="$ctrl.selectedElement('Bus_0006')"></div>
+        <div ma-selector=".ems-electrical-element" ng-mouseenter="$ctrl.showTooltip($event)"
+            ng-mouseleave="$ctrl.hideTooltip($event)" ng-click="$ctrl.selectedElement($event)" ems-electrical></div>
+
+        <!-- <div ma-selector="#Bus_0006" class="{{$ctrl.svgColorFill('Bus_0006')}}" ng-click="$ctrl.selectedElement('Bus_0006')"></div>
         <div ma-selector="#Bus_0007" class="{{$ctrl.svgColorFill('Bus_0007')}}" ng-click="$ctrl.selectedElement('Bus_0007')"></div>
         <div ma-selector="#Bus_0008" class="{{$ctrl.svgColorFill('Bus_0008')}}" ng-click="$ctrl.selectedElement('Bus_0008')"></div>
         <div ma-selector="#Bus_0009" class="{{$ctrl.svgColorFill('Bus_0009')}}" ng-click="$ctrl.selectedElement('Bus_0009')"></div>
@@ -70,6 +73,6 @@
             ng-click="$ctrl.selectedElement('Load_0014')"
             ng-mouseenter="$ctrl.showTooltip('Load_0014')"
             ng-mouseleave="$ctrl.hideTooltip('Load_0014')"
-        ></div>
+        ></div> -->
     </ma-svg>
 </div>

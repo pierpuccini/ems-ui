@@ -15,17 +15,21 @@ import systemMonitoring from './components/systemMonitoring/systemMonitoring';
 
 import pointDisplay from './components/pointDisplay/pointDisplay';
 
+import electrical from './components/systemMonitoring/electrical';
+
 // import uberUtilFactory from './services/uberUtil';
 
 import './emsUi.css';
 
 const emsUiModule = angular.module('emsUiModule', ['maUiApp']);
 
-emsUiModule.component('emsDemandOverview', demandOverview);
-emsUiModule.component('emsActiveAlarms', activeAlarms);
-emsUiModule.component('emsStatisticsWidget', statisticsWidget);
-emsUiModule.component('emsSystemMonitoring', systemMonitoring);
-emsUiModule.component('emsPointDisplay', pointDisplay);
+emsUiModule
+    .component('emsDemandOverview', demandOverview)
+    .component('emsActiveAlarms', activeAlarms)
+    .component('emsStatisticsWidget', statisticsWidget)
+    .component('emsSystemMonitoring', systemMonitoring)
+    .component('emsPointDisplay', pointDisplay)
+    .directive('emsElectrical', electrical);
 
 // emsUiModule.factory('UberUtil', uberUtilFactory);
 emsUiModule.config([
