@@ -133,12 +133,14 @@ class SystemMonitoringController {
     }
 
     showTooltip(event) {
-        const { electrical } = this.electricalItem(event.target);
+        const { electrical, idOne, idTwo } = this.electricalItem(event.target);
 
         let pointNames = [];
+        let elementsTag = [electrical];
         if (this.points) {
             if (electrical === 'Load') {
-                pointNames = ['Nominal Active Power', 'Load Price'];
+                pointNames = ['Nominal Active Power', 'Load Price', 'Cost'];
+                elementsTag = ['System', 'Load'];
             }
             if (electrical === 'Bus') {
                 pointNames = ['Active Flow', 'Active Gen', 'Active Out'];
@@ -151,13 +153,14 @@ class SystemMonitoringController {
             }
             const elementObj = this.points.reduce((result, point) => {
                 const shortName = point.name;
-                if (point.tags.element === electrical && pointNames.includes(point.name)) {
+                if (elementsTag.includes(point.tags.element) && pointNames.includes(point.name)) {
                     result[shortName] = point;
                 }
                 return result;
             }, {});
 
             Object.assign(this.tooltipScope, {
+                $item: [electrical, idOne, idTwo].join(' '),
                 $points: elementObj
             });
 

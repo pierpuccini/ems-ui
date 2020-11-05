@@ -31,6 +31,7 @@ class DemandOverviewController {
             .query()
             .then((points) => {
                 this.points = points;
+                this.setFirstElem();
             });
     }
 
@@ -38,6 +39,9 @@ class DemandOverviewController {
         const [element, id1, id2] = el.split('_');
         this.element = el.replace('_', ' ');
         const filteredPoints = this.points.filter((point) => {
+            if (element === 'Load' && point.name === 'Cost') {
+                return true;
+            }
             const elementTag = element.toLowerCase();
             let value = `${id1}`;
             if (id2) {
@@ -50,6 +54,13 @@ class DemandOverviewController {
         this.filteredPoints = filteredPoints;
         const defaultPoints = filteredPoints.map((point) => point.name);
         this.defaultPoints = [el, ...defaultPoints];
+    }
+
+    setFirstElem() {
+        const filteredPoints = this.points.filter((point) => point.tags.element === this.element);
+        this.filteredPoints = filteredPoints;
+        const defaultPoints = filteredPoints.map((point) => point.name);
+        this.defaultPoints = [this.element, ...defaultPoints];
     }
 }
 
