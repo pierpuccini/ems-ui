@@ -85,6 +85,7 @@ class StatisticsWidgetController {
         }
 
         return pointQuery
+            .ne('name', 'Cost Ranges')
             .query()
             .then((points) => {
                 return this.maFilter(points, filter, ['name', 'native', 'common']);

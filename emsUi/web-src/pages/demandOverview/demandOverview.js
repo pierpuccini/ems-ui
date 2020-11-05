@@ -39,7 +39,7 @@ class DemandOverviewController {
         const [element, id1, id2] = el.split('_');
         this.element = el.replace('_', ' ');
         const filteredPoints = this.points.filter((point) => {
-            if (element === 'Load' && point.name === 'Cost') {
+            if (element === 'Load' && point.name === 'Cost Ranges') {
                 return true;
             }
             const elementTag = element.toLowerCase();

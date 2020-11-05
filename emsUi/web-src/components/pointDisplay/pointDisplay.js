@@ -17,7 +17,7 @@ class PointDisplayController {
 
     $onChanges(changes) {
         if (changes.points && changes.points.currentValue) {
-            this.cost = this.points.find((point) => point.name === 'Cost');
+            this.cost = this.points.find((point) => point.name === 'Cost Ranges');
             this.load = this.points.find((point) => point.name === 'Nominal Active Power');
         }
     }
