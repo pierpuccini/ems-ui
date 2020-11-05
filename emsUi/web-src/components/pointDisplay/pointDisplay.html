@@ -7,9 +7,15 @@
     </div>
     <ma-point-value style="font-size: 12px;" point="point" enable-popup="right"></ma-point-value>
 </div>
-<div style="margin-top: 16px;" ng-if="$ctrl.loadPrice">
+<div style="margin-top: 16px;" ng-if="$ctrl.element.includes('Load')">
     <md-divider></md-divider>
 
-    <ma-point-values point="$ctrl.loadPrice" values="values" latest="2" realtime="true"></ma-point-values>
-    <pre>{{ values | json }}</pre>
+    <ma-get-point-value point="$ctrl.load"></ma-get-point-value>
+    <ma-point-values point="$ctrl.cost" values="values" latest="2" realtime="true"></ma-point-values>
+    <div ng-if="values[0].value === values[1].value" ma-tr="ems.demand.neutralMessage"></div>
+    <div ng-if="values[1].value > values[0].value" ma-tr="ems.demand.negativelMessage"
+        ma-tr-args="$ctrl.priceCalculator(values)"></div>
+    <div ng-if="values[0].value < values[1].value" ma-tr="ems.demand.positiveMessage"
+        ma-tr-args="$ctrl.priceCalculator(values)"></div>
+    <ma-set-point-value point="$ctrl.load"></ma-set-point-value>
 </div>
