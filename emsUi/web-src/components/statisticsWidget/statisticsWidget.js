@@ -56,9 +56,10 @@ class StatisticsWidgetController {
     setDefaultPoints(showSensorXid) {
         if (this.defaultPoints.length > 0) {
             const [element] = this.defaultPoints;
+            this.element = element;
             this.defaultPoints.shift();
             this.getPoints().then((points) => {
-                this.selectedPoints = points.filter((point) => this.defaultPoints.includes(point.name) && point.deviceName === element);
+                this.selectedPoints = points.filter((point) => this.defaultPoints.includes(point.name));
                 this.buildSettings();
             });
             this.showSensorXid = showSensorXid;
@@ -67,7 +68,21 @@ class StatisticsWidgetController {
 
     getPoints(filter) {
         const pointQuery = this.maPoint.buildQuery().eq('enabled', true);
-        // .buildQuery().eq('tags.equipmentType', this.equipmentType).eq('tags.site', this.siteXid);
+
+        const [element, id1, id2] = this.element.split('_');
+
+        const elementTag = element.toLowerCase();
+
+        let value = `${id1}`;
+        if (id2) {
+            value = `${value}_${id2}`;
+        }
+
+        pointQuery.eq('tags.element', element);
+
+        if (id1) {
+            pointQuery.eq(`tags.${elementTag}`, value);
+        }
 
         return pointQuery
             .query()

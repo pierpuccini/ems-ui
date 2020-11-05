@@ -14,6 +14,12 @@ class PointDisplayController {
     static get $inject() {
         return [];
     }
+
+    $onChanges(changes) {
+        if (changes.points && changes.points.currentValue) {
+            this.loadPrice = this.points.find((point) => point.name === 'Load Price');
+        }
+    }
 }
 
 export default {

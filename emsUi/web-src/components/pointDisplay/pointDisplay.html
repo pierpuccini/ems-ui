@@ -7,3 +7,9 @@
     </div>
     <ma-point-value style="font-size: 12px;" point="point" enable-popup="right"></ma-point-value>
 </div>
+<div style="margin-top: 16px;" ng-if="$ctrl.loadPrice">
+    <md-divider></md-divider>
+
+    <ma-point-values point="$ctrl.loadPrice" values="values" latest="2" realtime="true"></ma-point-values>
+    <pre>{{ values | json }}</pre>
+</div>
