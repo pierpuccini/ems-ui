@@ -168,6 +168,8 @@ class SystemMonitoringController {
             this.tooltipElement.css('transform', `translate(${x}px, ${y}px)`);
             this.tooltipElement.css('visibility', 'visible');
         }
+
+        this.selectedElement(event);
     }
 
     hideTooltip(event) {
