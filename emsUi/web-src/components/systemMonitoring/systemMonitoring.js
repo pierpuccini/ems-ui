@@ -140,6 +140,15 @@ class SystemMonitoringController {
             if (electrical === 'Load') {
                 pointNames = ['Nominal Active Power', 'Load Price'];
             }
+            if (electrical === 'Bus') {
+                pointNames = ['Active Flow', 'Active Gen', 'Active Out'];
+            }
+            if (electrical === 'Gen') {
+                pointNames = ['Active Power'];
+            }
+            if (electrical === 'Line' || electrical === 'Trf') {
+                pointNames = ['Loading'];
+            }
             const elementObj = this.points.reduce((result, point) => {
                 const shortName = point.name;
                 if (point.tags.element === electrical && pointNames.includes(point.name)) {
@@ -152,10 +161,9 @@ class SystemMonitoringController {
                 $points: elementObj
             });
 
-            const elementRect = this.$element[0].getBoundingClientRect();
-            const targetRect = event.target.getBoundingClientRect();
-            const x = targetRect.x - elementRect.x + targetRect.width + 5;
-            const y = targetRect.y - elementRect.y;
+            const { clientX, clientY } = event;
+            const x = clientX + 15;
+            const y = clientY - 110;
 
             this.tooltipElement.css('transform', `translate(${x}px, ${y}px)`);
             this.tooltipElement.css('visibility', 'visible');
