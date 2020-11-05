@@ -21,19 +21,6 @@ class PointDisplayController {
             this.load = this.points.find((point) => point.name === 'Nominal Active Power');
         }
     }
-
-    priceCalculator(values) {
-        if (this.load.value) {
-            const [past, now] = values;
-            const loadInKw = this.load.value * 1000000;
-            const previousPay = (loadInKw * past.value) / 1000000;
-            const nowPay = (loadInKw * now.value) / 1000000;
-            const percent = Math.abs(past - now) / 100;
-
-            return [`${percent} %`, 'test'];
-        }
-        return ['N/A'];
-    }
 }
 
 export default {
