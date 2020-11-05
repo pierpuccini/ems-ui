@@ -1,7 +1,7 @@
 <div>
     <h3 class="ma-no-margin" ng-bind="$ctrl.element"></h3>
 </div>
-<div ng-repeat="point in $ctrl.selectedPoints track by $index">
+<div ng-repeat="point in $ctrl.points track by point.xid">
     <div>
         <p>{{point.name}}</p>
     </div>

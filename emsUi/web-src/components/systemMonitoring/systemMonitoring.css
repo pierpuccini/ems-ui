@@ -50,6 +50,7 @@ ems-system-monitoring > .ems-tooltip {
     background-color: var(--ma-background);
     color: var(--ma-background-contrast);
     font-size: 1.2rem;
+    z-index: 1;
 }
 
 /* ems-system-monitoring path.svg-color-fill.ems-green,

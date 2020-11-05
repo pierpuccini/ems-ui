@@ -16,7 +16,7 @@ class DemandOverviewController {
     }
 
     constructor(maPoint) {
-        this.elementType = 'Bus';
+        this.element = 'System';
         this.maPoint = maPoint;
     }
 
@@ -35,8 +35,19 @@ class DemandOverviewController {
     }
 
     setElement(el) {
-        this.element = el;
-        const filteredPoints = this.points.filter((point) => point.deviceName === el);
+        const [element, id1, id2] = el.split('_');
+        this.element = el.replace('_', ' ');
+        const filteredPoints = this.points.filter((point) => {
+            const elementTag = element.toLowerCase();
+            let value = `${id1}`;
+            if (id2) {
+                value = `${value}_${id2}`;
+            }
+            const matchesElId = point.tags[elementTag] === value;
+            const matchesElement = point.tags.element === element;
+            return matchesElement && matchesElId;
+        });
+        this.filteredPoints = filteredPoints;
         const defaultPoints = filteredPoints.map((point) => point.name);
         this.defaultPoints = [el, ...defaultPoints];
     }
