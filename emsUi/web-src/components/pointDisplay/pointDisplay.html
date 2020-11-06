@@ -10,30 +10,35 @@
 <div style="margin-top: 16px;" ng-if="$ctrl.element.includes('Load')">
     <md-divider></md-divider>
 
+    <ma-get-point-value point="$ctrl.load"></ma-get-point-value>
     <ma-get-point-value point="$ctrl.cost"></ma-get-point-value>
+
     <div ng-if="$ctrl.cost.value === 0" ma-tr="ems.demand.neutralMessage" layout-margin></div>
     <div ng-if="$ctrl.cost.value === 1" ma-tr="ems.demand.negativelMessage" layout-margin>
     </div>
     <div ng-if="$ctrl.cost.value === 2" ma-tr="ems.demand.positiveMessage" layout-margin>
     </div>
+
     <div layout="row" layout-align="space-between center">
         <md-input-container>
             <label ma-tr="ems.demand.percent"></label>
-            <input type="number" name="percent" ng-model="project.rate" min="0" max="100" />
+            <input type="number" name="percent" ng-model="loadPercent" min="0" max="100" />
         </md-input-container>
         <div layout="column">
-            <md-button class="md-icon-button md-accent" aria-label="Increase">
+            <md-button class="md-icon-button md-accent" aria-label="Increase"
+                ng-click="$ctrl.calculateNewLoad('+', loadPercent)">
                 <md-tooltip md-direction="left" ma-tr="ems.demand.increase"></md-tooltip>
                 <md-icon>keyboard_arrow_up</md-icon>
             </md-button>
-            <md-button class="md-icon-button md-accent" aria-label="Decrease">
+            <md-button class="md-icon-button md-accent" aria-label="Decrease"
+                ng-click="$ctrl.calculateNewLoad('-', loadPercent)">
                 <md-tooltip md-direction="left" ma-tr="ems.demand.decrease"></md-tooltip>
                 <md-icon>keyboard_arrow_down</md-icon>
             </md-button>
         </div>
     </div>
     <div layout="column" layout-align="center stretch">
-        <md-button class="md-raised md-accent" ma-tr="ems.demand.set"></md-button>
+        <md-button class="md-raised md-accent" ma-tr="ems.demand.set" ng-click="$ctrl.setNewLoad($event)"></md-button>
     </div>
     <!-- <ma-set-point-value point="$ctrl.load"></ma-set-point-value> -->
 </div>
