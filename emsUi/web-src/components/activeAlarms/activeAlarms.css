@@ -1,60 +1,57 @@
-/* uber-active-alarms td.alarm > div > div {
+/* ems-active-alarms td.alarm > div > div {
     padding: 0 0.5rem;
 } */
 
-uber-active-alarms .uber-indicator {
+ems-active-alarms .ems-indicator {
     margin-right: 6px;
 }
 
-uber-active-alarms table.md-table:not(.md-row-select) td.md-cell:first-child,
+ems-active-alarms table.md-table:not(.md-row-select) td.md-cell:first-child,
 table.md-table:not(.md-row-select) th.md-column:first-child {
     padding: 0px !important;
 }
 
-uber-active-alarms table.md-table td.md-cell:last-child,
+ems-active-alarms table.md-table td.md-cell:last-child,
 table.md-table th.md-column:last-child {
     padding: 0px !important;
 }
 
-uber-active-alarms md-table-container.uber-table > table.md-table td.md-cell p {
+ems-active-alarms md-table-container.ems-table > table.md-table td.md-cell p {
     font-size: 1.22rem;
     line-height: 1.25;
 }
 
-uber-active-alarms
-    table.md-table:not(.md-row-select)
-    td.md-cell:nth-child(n + 2):nth-last-child(n + 2),
-table.md-table:not(.md-row-select)
-    th.md-column:nth-child(n + 2):nth-last-child(n + 2) {
+ems-active-alarms table.md-table:not(.md-row-select) td.md-cell:nth-child(n + 2):nth-last-child(n + 2),
+table.md-table:not(.md-row-select) th.md-column:nth-child(n + 2):nth-last-child(n + 2) {
     padding: 0;
 }
 
 /* Alarm indicators */
 
-uber-active-alarms .uber-alarm-indicator.CRITICAL {
+ems-active-alarms .ems-alarm-indicator.CRITICAL {
     fill: #ed1f1f !important;
 }
 
-uber-active-alarms .uber-alarm-indicator.URGENT {
+ems-active-alarms .ems-alarm-indicator.URGENT {
     fill: #ed7926 !important;
 }
 
-uber-active-alarms .uber-alarm-indicator.MAJOR {
+ems-active-alarms .ems-alarm-indicator.MAJOR {
     fill: #ed7926 !important;
 }
 
-uber-active-alarms .uber-alarm-indicator.WARNING {
+ems-active-alarms .ems-alarm-indicator.WARNING {
     fill: #ecc94b !important;
 }
 
-uber-active-alarms .uber-alarm-indicator.IMPORTANT {
+ems-active-alarms .ems-alarm-indicator.IMPORTANT {
     fill: #ecc94b !important;
 }
 
-uber-active-alarms .uber-alarm-indicator.MINOR {
+ems-active-alarms .ems-alarm-indicator.MINOR {
     fill: #ecc94b !important;
 }
 
-uber-active-alarms .uber-alarm-indicator.INFORMATION {
+ems-active-alarms .ems-alarm-indicator.INFORMATION {
     fill: #47b275 !important;
 }

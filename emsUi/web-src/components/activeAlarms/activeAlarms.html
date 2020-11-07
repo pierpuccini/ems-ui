@@ -1,4 +1,4 @@
-<md-table-container class="uber-table">
+<md-table-container class="ems-table">
     <table md-table>
         <thead md-head md-order="$ctrl.order">
             <tr md-row>
@@ -13,15 +13,16 @@
                 <td md-cell>
                     No active alarms
                 </td>
+                <td md-cell></td>
             </tr>
             <tr md-row
                 ng-repeat="event in $ctrl.activeEvents.events | limitTo: $ctrl.query.limit: ($ctrl.query.page - 1) * $ctrl.query.limit">
-                <td md-cell><svg class="uber-indicator" width="20" height="20">
-                        <rect width="20" height="20" rx="0" ry="0" class="uber-alarm-indicator {{event.alarmLevel}}" />
+                <td md-cell><svg class="ems-indicator" width="20" height="20">
+                        <rect width="20" height="20" rx="0" ry="0" class="ems-alarm-indicator {{event.alarmLevel}}" />
                     </svg></td>
                 <td md-cell>
                     <p class="ma-no-margin" ng-bind="event.message"></p>
-                    <p class="ma-no-margin uber-capitalize">
+                    <p class="ma-no-margin ems-capitalize">
                         {{event.alarmLevel === 'URGENT' ? 'MAJOR' : event.alarmLevel}}</p>
                 </td>
                 <td md-cell>
@@ -34,5 +35,5 @@
     </table>
 </md-table-container>
 
-<md-table-pagination class="uber-table-pagination" md-limit="$ctrl.query.limit" md-limit-options="[5, 10, 15]"
+<md-table-pagination class="ems-table-pagination" md-limit="$ctrl.query.limit" md-limit-options="[5, 10, 15]"
     md-page="$ctrl.query.page" md-total="{{$ctrl.activeEvents.events.length}}"></md-table-pagination>

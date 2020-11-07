@@ -43,11 +43,12 @@ class ActiveAlarmsController {
     getAlarmCount() {
         const activeEventsQuery = this.maEvents.notificationManager.buildActiveQuery().eq('eventType.eventType', 'DATA_POINT');
 
-        if (this.element) {
-            activeEventsQuery.eq('eventType.reference1.deviceName', this.element);
-        }
+        // if (this.element) {
+        //     activeEventsQuery.eq('eventType.reference1.tags.element', this.element);
+        // }
 
         this.activeEvents = activeEventsQuery.activeEvents();
+        console.log(this.activeEvents);
     }
 }
 
