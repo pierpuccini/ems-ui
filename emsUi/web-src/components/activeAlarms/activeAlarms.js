@@ -48,7 +48,6 @@ class ActiveAlarmsController {
         // }
 
         this.activeEvents = activeEventsQuery.activeEvents();
-        console.log(this.activeEvents);
     }
 }
 
