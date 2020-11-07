@@ -1,5 +1,5 @@
-<div layout="row">
-    <md-card flex>
+<div layout="colum" layout-gt-sm="row">
+    <md-card flex="100" flex-gt-sm="80">
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ma-tr="ems.demand.svgTitle"></span>
@@ -10,7 +10,7 @@
             </ems-system-monitoring>
         </md-card-content>
     </md-card>
-    <md-card flex="20">
+    <md-card flex="100" flex-gt-sm="20">
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ma-tr="ems.demand.elementData" ma-tr-args="[$ctrl.element]"></span>
@@ -25,8 +25,8 @@
         </md-card-content>
     </md-card>
 </div>
-<div layout="row">
-    <md-card flex="20">
+<div layout="colum" layout-gt-sm="row">
+    <md-card flex="100" flex-gt-sm="20">
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ma-tr="ems.demand.activeAlarms"></span>
@@ -38,7 +38,7 @@
             </div>
         </md-card-content>
     </md-card>
-    <md-card flex>
+    <md-card flex="100" flex-gt-sm="80">
         <md-card-header class="ma-background-primary ma-hue-default">
             <h3 class="ma-no-margin">
                 <span ng-if="!$ctrl.selectedElement" ma-tr="ems.demand.statistics"></span>
