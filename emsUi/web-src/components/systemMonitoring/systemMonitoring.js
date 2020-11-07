@@ -31,7 +31,7 @@ class SystemMonitoringController {
     }
 
     svgColorFill(details) {
-        const { electrical } = details;
+        const { electrical, idOne, idTwo } = details;
 
         const result = 'svg-color-fill';
         const successClass = 'ems-green';
@@ -39,7 +39,7 @@ class SystemMonitoringController {
         const dangerClass = 'ems-red';
         if (this.points) {
             if (electrical === 'Bus') {
-                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.name === 'Voltage Magnitude');
+                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.tags.bus === idOne && point.name === 'Voltage Magnitude');
                 if (foundPoint) {
                     if (foundPoint.value < 0.95 || foundPoint.value > 1.05) {
                         return `${result} bus ${dangerClass}`;
@@ -48,8 +48,8 @@ class SystemMonitoringController {
                 }
             }
             if (electrical === 'Line') {
-                const pointLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Loading');
-                const pointMaxLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Max Loading');
+                const pointLoading = this.points.find((point) => point.tags.element === electrical && point.tags.line === `${idOne}_${idTwo}` && point.name === 'Loading');
+                const pointMaxLoading = this.points.find((point) => point.tags.element === electrical && point.tags.line === `${idOne}_${idTwo}` && point.name === 'Max Loading');
                 if (pointLoading && pointMaxLoading) {
                     if (pointLoading.value > pointMaxLoading.value) {
                         return `${result} line ${dangerClass}`;
@@ -61,8 +61,8 @@ class SystemMonitoringController {
                 }
             }
             if (electrical === 'Trf') {
-                const pointLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Loading');
-                const pointMaxLoading = this.points.find((point) => point.tags.element === electrical && point.name === 'Max Loading');
+                const pointLoading = this.points.find((point) => point.tags.element === electrical && point.tags.trf === `${idOne}_${idTwo}` && point.name === 'Loading');
+                const pointMaxLoading = this.points.find((point) => point.tags.element === electrical && point.tags.trf === `${idOne}_${idTwo}` && point.name === 'Max Loading');
                 if (pointLoading && pointMaxLoading) {
                     if (pointLoading.value > pointMaxLoading.value) {
                         return `${result} trf ${dangerClass}`;
@@ -74,7 +74,7 @@ class SystemMonitoringController {
                 }
             }
             if (electrical === 'Gen') {
-                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.name === 'Active Power');
+                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.tags.gen === idOne && point.name === 'Active Power');
                 if (foundPoint) {
                     if (foundPoint.value === 0) {
                         return `${result} gen ${dangerClass}`;
@@ -83,7 +83,7 @@ class SystemMonitoringController {
                 }
             }
             if (electrical === 'Load') {
-                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.name === 'Nominal Active Power');
+                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.tags.load === idOne && point.name === 'Nominal Active Power');
                 if (foundPoint) {
                     if (foundPoint.value === 0) {
                         return `${result} load ${dangerClass}`;
