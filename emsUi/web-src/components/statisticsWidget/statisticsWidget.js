@@ -6,6 +6,8 @@
 import template from './statisticsWidget.html';
 import './statisticsWidget.css';
 
+const STATISTICS_KEY = 'emsStatSettings';
+
 const PRESET_COLORS = ['#FF6600', '#FCD202', '#B0DE09', '#0D8ECF', '#2A0CD0', '#CD0D74', '#CC0000', '#00CC00', '#0000CC', '#DDDDDD', '#999999', '#333333', '#990000'];
 
 class StatisticsWidgetController {
@@ -14,14 +16,15 @@ class StatisticsWidgetController {
     }
 
     static get $inject() {
-        return ['maPoint', 'maDialogHelper', 'maUiDateBar', '$filter'];
+        return ['maPoint', 'maDialogHelper', 'maUiDateBar', '$filter', 'localStorageService'];
     }
 
-    constructor(maPoint, maDialogHelper, maUiDateBar, $filter) {
+    constructor(maPoint, maDialogHelper, maUiDateBar, $filter, localStorageService) {
         this.maPoint = maPoint;
         this.maDialogHelper = maDialogHelper;
         this.dateBar = maUiDateBar;
         this.maFilter = $filter('maFilter');
+        this.localStorageService = localStorageService;
 
         // this.to = new Date();
 
@@ -84,6 +87,10 @@ class StatisticsWidgetController {
             pointQuery.eq(`tags.${elementTag}`, value);
         }
 
+        if (element === 'Bus' || element === 'Load') {
+            pointQuery.eq('tags.trend', true);
+        }
+
         return pointQuery
             .ne('name', 'Cost Ranges')
             .query()
@@ -112,6 +119,10 @@ class StatisticsWidgetController {
                 // This is in order to automaticly set 4 initial axises
                 if (index < this.axisOptions.length) {
                     valueAxis = valueAxis == null ? this.axisOptions[index % this.axisOptions.length].name : valueAxis;
+                }
+
+                if (this.buildAxis === false) {
+                    valueAxis = null;
                 }
 
                 this.selectedPoints[index].chartColour = chartColour;
@@ -185,7 +196,8 @@ export default {
     bindings: {
         defaultPoints: '<?',
         column: '<?',
-        showSettings: '<?'
+        showSettings: '<?',
+        buildAxis: '<?'
     },
     controller: StatisticsWidgetController,
     template
