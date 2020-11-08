@@ -50,7 +50,7 @@ emsUiModule.config([
                         rollupControls: true
                     }
                 },
-                permission: ['anonymous'],
+                permission: ['anonymous', 'user'],
                 weight: 1
             }
         ]);
