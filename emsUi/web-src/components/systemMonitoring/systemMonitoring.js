@@ -41,7 +41,7 @@ class SystemMonitoringController {
             if (electrical === 'Bus') {
                 const foundPoint = this.points.find((point) => point.tags.element === electrical && point.tags.bus === idOne && point.name === 'Voltage Magnitude');
                 if (foundPoint) {
-                    if (foundPoint.value < 0.95 || foundPoint.value > 1.05) {
+                    if (foundPoint.value < 0.9 || foundPoint.value > 1.1) {
                         return `${result} bus ${dangerClass}`;
                     }
                     return `${result} bus ${successClass}`;
