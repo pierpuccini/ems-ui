@@ -83,7 +83,7 @@ class SystemMonitoringController {
                 }
             }
             if (electrical === 'Load') {
-                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.tags.load === idOne && point.name === 'Nominal Active Power');
+                const foundPoint = this.points.find((point) => point.tags.element === electrical && point.tags.load === idOne && point.name === 'Active Power');
                 if (foundPoint) {
                     if (foundPoint.value === 0) {
                         return `${result} load ${dangerClass}`;
@@ -139,7 +139,7 @@ class SystemMonitoringController {
         let elementsTag = [electrical];
         if (this.points) {
             if (electrical === 'Load') {
-                pointNames = ['Nominal Active Power', 'Load Price', 'Cost'];
+                pointNames = ['Active Power', 'Load Price', 'Cost'];
                 elementsTag = ['System', 'Load'];
             }
             if (electrical === 'Bus') {
