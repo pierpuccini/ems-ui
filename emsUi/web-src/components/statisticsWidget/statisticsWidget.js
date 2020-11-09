@@ -6,7 +6,8 @@
 import template from './statisticsWidget.html';
 import './statisticsWidget.css';
 
-const STATISTICS_KEY = 'emsStatSettings';
+const PRESET_AXIS_ELEMENTS = ['System', 'Bus', 'Load', 'Gen'];
+const RIGHT_AXIS_NAMES = ['Loading', 'Total demand', 'Nominal Voltage', 'Nominal Active Power', 'Active Gen', 'Reactive Gen'];
 
 const PRESET_COLORS = ['#FF6600', '#FCD202', '#B0DE09', '#0D8ECF', '#2A0CD0', '#CD0D74', '#CC0000', '#00CC00', '#0000CC', '#DDDDDD', '#999999', '#333333', '#990000'];
 
@@ -95,6 +96,7 @@ class StatisticsWidgetController {
             .ne('name', 'Cost Ranges')
             .query()
             .then((points) => {
+                this.defaultAxis(points);
                 return this.maFilter(points, filter, ['name', 'native', 'common']);
             })
             .catch((err) => {
@@ -110,6 +112,14 @@ class StatisticsWidgetController {
         return this.selectedPoints.length > 0;
     }
 
+    defaultAxis(points) {
+        points.forEach((point) => {
+            if (PRESET_AXIS_ELEMENTS.includes(point.tags.element) && RIGHT_AXIS_NAMES.includes(point.name)) {
+                point.valueAxis = 'right';
+            }
+        });
+    }
+
     buildSettings() {
         if (this.selectedPoints[this.selectedPoints.length - 1] !== 'clear') {
             this.selectedPoints.forEach((point, index) => {
@@ -117,12 +127,8 @@ class StatisticsWidgetController {
                 chartColour = chartColour === '' ? PRESET_COLORS[index % PRESET_COLORS.length] : chartColour;
 
                 // This is in order to automaticly set 4 initial axises
-                if (index < this.axisOptions.length) {
+                if (this.buildAxis && index < this.axisOptions.length && !valueAxis) {
                     valueAxis = valueAxis == null ? this.axisOptions[index % this.axisOptions.length].name : valueAxis;
-                }
-
-                if (this.buildAxis === false) {
-                    valueAxis = null;
                 }
 
                 this.selectedPoints[index].chartColour = chartColour;
