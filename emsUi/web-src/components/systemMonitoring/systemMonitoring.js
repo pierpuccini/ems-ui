@@ -52,12 +52,12 @@ class SystemMonitoringController {
                 const pointMaxLoading = this.points.find((point) => point.tags.element === electrical && point.tags.line === `${idOne}_${idTwo}` && point.name === 'Max Loading');
                 if (pointLoading && pointMaxLoading) {
                     if (pointLoading.value > pointMaxLoading.value) {
-                        return `${result} line ${dangerClass}`;
+                        return `${result} line ${dangerClass} st1`;
                     }
                     if (pointLoading.value < pointMaxLoading.value && pointLoading.value > pointMaxLoading.value - pointMaxLoading.value * 0.2) {
-                        return `${result} line ${warningClass}`;
+                        return `${result} line ${warningClass} st1`;
                     }
-                    return `${result} line ${successClass}`;
+                    return `${result} line ${successClass} st1`;
                 }
             }
             if (electrical === 'Trf') {

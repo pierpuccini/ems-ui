@@ -1,148 +1,135 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="1204px"
-   height="821px"
-   viewBox="-0.5 -0.5 1204 821"
-   id="svg216">
-  <metadata
-     id="metadata220">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs10" />
-  <g
-     id="bg">
-    <path class="ems-electrical-element" id="Bus_0006" fill="none" stroke="#000000" stroke-width="2" d="M 240 600 L 480 600" />
-    <g class="ems-electrical-element" id="Trf_0005_0006">
-      <path id="Trf_0005_0006_line" fill="none" stroke="#000000" d="M 360 640 L 360 603" />
-      <ellipse id="ellipse20" stroke="#000000" fill="none" ry="20" rx="20" cy="680" cx="360" />
-      <ellipse id="ellipse22" stroke="#000000" fill="none" ry="20" rx="20" cy="660" cx="360" />
-      <ellipse id="ellipse24" stroke="#000000" fill="none" ry="20" rx="20" cy="680" cx="360" />
-    </g>
-    <g class="ems-electrical-element" id="Gen_0006">
-      <path id="path30" stroke="#000000" fill="none" d="M 280 640 L 280 603" />
-      <ellipse id="ellipse36" stroke="#000000" fill="none" ry="30" rx="30" cy="670" cx="280" />
-      <path id="path38" stroke="#000000" fill="none" d="M 265 670 C 266.16 666.86 269.16 664.78 272.5 664.78 C 275.84 664.78 278.84 666.86 280 670 C 281.16 673.14 284.16 675.22 287.5 675.22 C 290.84 675.22 293.84 673.14 295 670" />
-    </g>
-    <g class="ems-electrical-element" id="Load_0006">
-      <path id="path62" stroke="#000000" fill="none" d="M 440 620 L 440.09 603" />
-      <path id="path68" stroke="#000000" fill="none" d="M 420 640 L 440 680 L 460 640 Z" />
-      <path id="path70" stroke="#000000" fill="none" d="M 440 620 L 440 640" />
-    </g>
-    <path class="ems-electrical-element" id="Line_0006_0012" fill="none" stroke="#000000" d="M 83 320 L 110 320 Q 120 320 125.55 328.32 L 274.45 551.68 Q 280 560 280 570 L 280 597" />
-    <path class="ems-electrical-element" id="Bus_0012" fill="none" stroke="#000000" stroke-width="2" d="M 79 360 L 79 200" />
-    <path class="ems-electrical-element" id="Line_0012_0013" fill="none" stroke="#000000" d="M 83 240 L 110 240 Q 120 240 128 234 L 272 126 Q 280 120 280 110 L 280 83" />
-    <path class="ems-electrical-element" id="Bus_0013" fill="none" stroke="#000000" stroke-width="2" d="M 240 80 L 400 80" />
-    <path class="ems-electrical-element" id="Line_0006_0013" fill="none" stroke="#000000"  d="M 320 83 L 320 597" />
-    <path class="ems-electrical-element" id="Bus_0011" fill="none" stroke="#000000" stroke-width="2" d="M 720 320 L 560 320" />
-    <path class="ems-electrical-element" id="Line_0006_0011" fill="none" stroke="#000000" d="M 440 597 L 440 570 Q 440 560 446.25 552.19 L 593.75 367.81 Q 600 360 600 350 L 600 323" />
-    <g class="ems-electrical-element" id="Load_0012">
-      <path id="path80" stroke="#000000" fill="none" d="M 60 280 L 80 280 L 77 280.14" />
-      <path id="path86" transform="rotate(90,30,280)" stroke="#000000" fill="none" d="M 10 270 L 30 310 L 50 270 Z" />
-      <path id="path88" transform="rotate(90,30,280)" stroke="#000000" fill="none" d="M 30 250 L 30 270" />
-    </g>
-    <g class="ems-electrical-element" id="Load_0013">
-      <path id="path90" stroke="#000000" fill="none" d="M 320 60 L 320 80 L 320 60 L 320 77" />
-      <path id="path96" transform="rotate(-180,320,30)" stroke="#000000" fill="none" d="M 300 20 L 320 60 L 340 20 Z" />
-      <path id="path98" transform="rotate(-180,320,30)" stroke="#000000" fill="none" d="M 320 0 L 320 20" />
-    </g>
-    <g class="ems-electrical-element" id="Load_0011">
-      <path id="path100" stroke="#000000" fill="none" d="M 640 300 L 640 320 L 640 300 L 640 317" />
-      <path id="path106" transform="rotate(-180,640,270)" stroke="#000000" fill="none" d="M 620 260 L 640 300 L 660 260 Z" />
-      <path id="path108" transform="rotate(-180,640,270)" stroke="#000000" fill="none" d="M 640 240 L 640 260" />
-    </g>
-    <path class="ems-electrical-element" id="Bus_0010" fill="none" stroke="#000000" stroke-width="2" d="M 920 440 L 760 440" />
-    <g class="ems-electrical-element" id="Load_0010">
-      <path id="path112" stroke="#000000" fill="none" d="M 840 420 L 840 440 L 840 420 L 840 437" />
-      <path id="path118" transform="rotate(-180,840,390)" stroke="#000000" fill="none" d="M 820 380 L 840 420 L 860 380 Z" />
-      <path id="path120" fill="none" stroke="#000000" transform="rotate(-180,840,390)" d="M 840 360 L 840 380" />
-    </g>
-    <path class="ems-electrical-element" id="Line_0010_0011" fill="none" stroke="#000000" d="M 680 323 L 680 350 Q 680 360 685.55 368.32 L 754.45 471.68 Q 760 480 770 480 L 790 480 Q 800 480 800 470 L 800 443" />
-    <path class="ems-electrical-element" id="Bus_0009" fill="none" stroke="#000000" stroke-width="2" d="M 960 560 L 1200 560" />
-    <path class="ems-electrical-element" id="Line_0009_0010" fill="none" stroke="#000000" d="M 880 443 L 880 470 Q 880 480 889.49 483.16 L 990.51 516.84 Q 1000 520 1000 530 L 1000 557" />
-    <g class="ems-electrical-element" id="Trf_0004_0009">
-      <path id="path136" stroke="#000000" fill="none" d="M 1000 600 L 1000 563" />
-      <ellipse id="ellipse142" stroke="#000000" fill="none" ry="20" rx="20" cy="640" cx="1000" />
-      <ellipse id="ellipse144" stroke="#000000" fill="none" ry="20" rx="20" cy="620" cx="1000" />
-      <ellipse id="ellipse146" stroke="#000000" fill="none" ry="20" rx="20" cy="640" cx="1000" />
-    </g>
-    <path class="ems-electrical-element" id="Bus_0014" fill="none" stroke="#000000" stroke-width="2" d="M 880 200 L 720 200" />
-    <g class="ems-electrical-element" id="Load_0014">
-      <path id="path154" stroke="#000000" fill="none" d="M 800 180 L 800 200 L 800 180 L 800 197" />
-      <path id="path160" transform="rotate(-180,800,150)" stroke="#000000" fill="none" d="M 780 140 L 800 180 L 820 140 Z" />
-      <path id="path162" transform="rotate(-180,800,150)" stroke="#000000" fill="none" d="M 800 120 L 800 140" />
-    </g>
-    <path class="ems-electrical-element" id="Line_0013_0014" fill="none" stroke="#000000" d="M 360 83 L 360 110 Q 360 120 369.49 123.16 L 710.51 236.84 Q 720 240 730 240 L 750 240 Q 760 240 760 230 L 760 203" />
-    <g class="ems-electrical-element" id="Trf_0007_0009">
-      <path id="path170" stroke="#000000" fill="none" d="M 1080 600 L 1080 563" />
-      <ellipse id="ellipse176" stroke="#000000" fill="none" ry="20" rx="20" cy="640" cx="1080" />
-      <ellipse id="ellipse178" stroke="#000000" fill="none" ry="20" rx="20" cy="620" cx="1080" />
-      <ellipse id="ellipse180" stroke="#000000" fill="none" ry="20" rx="20" cy="640" cx="1080" />
-    </g>
-    <path class="ems-electrical-element" id="Line_0009_0014" fill="none" stroke="#000000" d="M 840 203 L 840 230 Q 840 240 846.51 247.59 L 1073.49 512.41 Q 1080 520 1080 530 L 1080 557" />
-    <g class="ems-electrical-element" id="Load_0009">
-      <path id="path192" stroke="#000000" fill="none" d="M 1160 580 L 1160 560 L 1160 580 L 1160 563" />
-      <path id="path198" stroke="#000000" fill="none" d="M 1140 600 L 1160 640 L 1180 600 Z" />
-      <path id="path200" stroke="#000000" fill="none" d="M 1160 580 L 1160 600" />
-    </g>
-    <g class="ems-electrical-element" id="Ext_0001">
-      <path id="path26" stroke-dasharray="6 6" stroke-width="2" stroke="#000000" fill="none" d="M 360 700 L 360 767" />
-      <ellipse id="ellipse28" stroke-width="2" stroke="#000000" fill="#000000" ry="3" rx="3" cy="770" cx="360" />
-      <ellipse id="ellipse202" stroke="#000000" fill="none" ry="25" rx="25" cy="795" cx="360" />
-      <path id="path204" stroke="#000000" fill="none" d="M 342.2 777.2 L 377.8 812.8 M 377.8 777.2 L 342.2 812.8" />
-    </g>
-    <g class="ems-electrical-element" id="Ext_0002">
-      <path id="path148" stroke-dasharray="6 6" stroke-width="2" stroke="#000000" fill="none" d="M 1000 660 L 1000 717" />
-      <ellipse id="ellipse150" stroke-width="2" stroke="#000000" fill="#000000" ry="3" rx="3" cy="720" cx="1000" />
-      <ellipse id="ellipse206" stroke="#000000" fill="none" ry="25" rx="25" cy="745" cx="1000" />
-      <path id="path208" stroke="#000000" fill="none" d="M 982.2 727.2 L 1017.8 762.8 M 1017.8 727.2 L 982.2 762.8" />
-    </g>
-    <g class="ems-electrical-element" id="Ext_0003">
-      <path id="path182" stroke-dasharray="6 6" stroke-width="2" stroke="#000000" fill="none" d="M 1080 660 L 1080 717" />
-      <ellipse id="ellipse184" stroke-width="2" stroke="#000000" fill="#000000" ry="3" rx="3" cy="720" cx="1080" />
-      <ellipse id="ellipse210" stroke="#000000" fill="none" ry="25" rx="25" cy="745" cx="1080" />
-      <path id="path212" stroke="#000000" fill="none" d="M 1062.2 727.2 L 1097.8 762.8 M 1097.8 727.2 L 1062.2 762.8" />
-    </g>
-    <ellipse id="ellipse16" cx="360" cy="600" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse32" cx="280" cy="600" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse44" cx="80" cy="320" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse46" cx="280" cy="600" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse52" cx="80" cy="240" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse54" cx="280" cy="80" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse58" cx="320" cy="80" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse60" cx="320" cy="600" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse64" cx="440.11" cy="600" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse76" cx="440" cy="600" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse78" cx="600" cy="320" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse82" cx="80" cy="280.17" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse92" cx="320" cy="80" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse102" cx="640" cy="320" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse114" cx="840" cy="440" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse124" cx="680" cy="320" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse126" cx="800" cy="440" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse132" cx="880" cy="440" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse134" cx="1000" cy="560" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse138" cx="1000" cy="560" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse156" cx="800" cy="200" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse166" cx="360" cy="80" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse168" cx="760" cy="200" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse172" cx="1080" cy="560" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse188" cx="840" cy="200" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse190" cx="1080" cy="560" rx="3" ry="3" fill="#000000" stroke="#000000" />
-    <ellipse id="ellipse194" cx="1160" cy="560" rx="3" ry="3" fill="#000000" stroke="#000000" />
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg216" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1204 821"
+	 style="enable-background:new 0 0 1204 821;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;}
+	.st1{fill:rgba(255,255,255,0.01);stroke:#000000;}
+	.st2{fill:rgba(255,255,255,0.01);stroke:#000000;}
+	.st3{fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:6,6;}
+	.st4{stroke:#000000;stroke-width:2;}
+	.st5{stroke:#000000;}
+</style>
+<path class="ems-electrical-element" id="Bus_0006" class="st0" d="M240.5,600.5h240"/>
+<g class="ems-electrical-element" id="Trf_0005_0006">
+	<path id="Trf_0005_0006_line" class="st1" d="M360.5,640.5v-37"/>
+	<ellipse id="ellipse20" class="st1" cx="360.5" cy="680.5" rx="20" ry="20"/>
+	<ellipse id="ellipse22" class="st1" cx="360.5" cy="660.5" rx="20" ry="20"/>
+	<ellipse id="ellipse24" class="st1" cx="360.5" cy="680.5" rx="20" ry="20"/>
+</g>
+<g class="ems-electrical-element" id="Gen_0006">
+	<path id="path30" class="st1" d="M280.5,640.5v-37"/>
+	<ellipse id="ellipse36" class="st2" cx="280.5" cy="670.5" rx="30" ry="30"/>
+	<path id="path38" class="st1" d="M265.5,670.5c1.2-3.1,4.2-5.2,7.5-5.2s6.3,2.1,7.5,5.2s4.2,5.2,7.5,5.2s6.3-2.1,7.5-5.2"/>
+</g>
+<g class="ems-electrical-element" id="Load_0006">
+	<path id="path62" class="st1" d="M440.5,620.5l0.1-17"/>
+	<path id="path68" class="st2" d="M420.5,640.5l20,40l20-40H420.5z"/>
+	<path id="path70" class="st1" d="M440.5,620.5v20"/>
+</g>
+<path class="ems-electrical-element" id="Line_0006_0012" class="st1" d="M83.5,320.5h27c6.7,0,11.8,2.8,15.6,8.3L275,552.2c3.7,5.5,5.5,11.7,5.5,18.3v27"/>
+<path class="ems-electrical-element" id="Bus_0012" class="st0" d="M79.5,360.5v-160"/>
+<path class="ems-electrical-element" id="Line_0012_0013" class="st1" d="M83.5,240.5h27c6.7,0,12.7-2,18-6l144-108c5.3-4,8-9.3,8-16v-27"/>
+<path class="ems-electrical-element" id="Bus_0013" class="st0" d="M240.5,80.5h160"/>
+<path class="ems-electrical-element" id="Line_0006_0013" class="st1" d="M320.5,83.5v514"/>
+<path class="ems-electrical-element" id="Bus_0011" class="st0" d="M720.5,320.5h-160"/>
+<path class="ems-electrical-element" id="Line_0006_0011" class="st1" d="M440.5,597.5v-27c0-6.7,2.1-12.6,6.2-17.8l147.5-184.4c4.2-5.2,6.2-11.1,6.2-17.8v-27"/>
+<g class="ems-electrical-element" id="Load_0012">
+	<path id="path80" class="st1" d="M60.5,280.5h20l-3,0.1"/>
+	<path id="path86" class="st2" d="M40.5,260.5l-40,20l40,20V260.5z"/>
+	<path id="path88" class="st1" d="M60.5,280.5h-20"/>
+</g>
+<g class="ems-electrical-element" id="Load_0013">
+	<path id="path90" class="st1" d="M320.5,60.5v20V60.5v17"/>
+	<path id="path96" class="st2" d="M340.5,40.5l-20-40l-20,40H340.5z"/>
+	<path id="path98" class="st1" d="M320.5,60.5v-20"/>
+</g>
+<g class="ems-electrical-element" id="Load_0011">
+	<path id="path100" class="st1" d="M640.5,300.5v20V300.5v17"/>
+	<path id="path106" class="st2" d="M660.5,280.5l-20-40l-20,40H660.5z"/>
+	<path id="path108" class="st1" d="M640.5,300.5v-20"/>
+</g>
+<path class="ems-electrical-element" id="Bus_0010" class="st0" d="M920.5,440.5h-160"/>
+<g class="ems-electrical-element" id="Load_0010">
+	<path id="path112" class="st1" d="M840.5,420.5v20V420.5v17"/>
+	<path id="path118" class="st2" d="M860.5,400.5l-20-40l-20,40H860.5z"/>
+	<path id="path120" class="st1" d="M840.5,420.5v-20"/>
+</g>
+<path class="ems-electrical-element" id="Line_0010_0011" class="st1" d="M680.5,323.5v27c0,6.7,1.9,12.8,5.5,18.3l69,103.4c3.7,5.5,8.9,8.3,15.5,8.3h20
+	c6.7,0,10-3.3,10-10v-27"/>
+<path class="ems-electrical-element" id="Bus_0009" class="st0" d="M960.5,560.5h240"/>
+<path class="ems-electrical-element" id="Line_0009_0010" class="st1" d="M880.5,443.5v27c0,6.7,3.2,11.1,9.5,13.2l101,33.7c6.3,2.1,9.5,6.5,9.5,13.2v27"/>
+<g class="ems-electrical-element" id="Trf_0004_0009">
+	<path id="path136" class="st1" d="M1000.5,600.5v-37"/>
+	<ellipse id="ellipse142" class="st1" cx="1000.5" cy="640.5" rx="20" ry="20"/>
+	<ellipse id="ellipse144" class="st1" cx="1000.5" cy="620.5" rx="20" ry="20"/>
+	<ellipse id="ellipse146" class="st1" cx="1000.5" cy="640.5" rx="20" ry="20"/>
+</g>
+<path class="ems-electrical-element" id="Bus_0014" class="st0" d="M880.5,200.5h-160"/>
+<g class="ems-electrical-element" id="Load_0014">
+	<path id="path154" class="st1" d="M800.5,180.5v20V180.5v17"/>
+	<path id="path160" class="st2" d="M820.5,160.5l-20-40l-20,40H820.5z"/>
+	<path id="path162" class="st1" d="M800.5,180.5v-20"/>
+</g>
+<path class="ems-electrical-element" id="Line_0013_0014" class="st1" d="M360.5,83.5v27c0,6.7,3.2,11.1,9.5,13.2l341,113.7c6.3,2.1,12.8,3.2,19.5,3.2h20
+	c6.7,0,10-3.3,10-10v-27"/>
+<g class="ems-electrical-element" id="Trf_0007_0009">
+	<path id="path170" class="st1" d="M1080.5,600.5v-37"/>
+	<ellipse id="ellipse176" class="st1" cx="1080.5" cy="640.5" rx="20" ry="20"/>
+	<ellipse id="ellipse178" class="st1" cx="1080.5" cy="620.5" rx="20" ry="20"/>
+	<ellipse id="ellipse180" class="st1" cx="1080.5" cy="640.5" rx="20" ry="20"/>
+</g>
+<path class="ems-electrical-element" id="Line_0009_0014" class="st1" d="M840.5,203.5v27c0,6.7,2.2,12.5,6.5,17.6l227,264.8c4.3,5.1,6.5,10.9,6.5,17.6v27"/>
+<g class="ems-electrical-element" id="Load_0009">
+	<path id="path192" class="st1" d="M1160.5,580.5v-20V580.5v-17"/>
+	<path id="path198" class="st2" d="M1140.5,600.5l20,40l20-40H1140.5z"/>
+	<path id="path200" class="st1" d="M1160.5,580.5v20"/>
+</g>
+<g class="ems-electrical-element" id="Ext_0001">
+	<path id="path26" class="st3" d="M360.5,700.5v67"/>
+	<ellipse id="ellipse202" class="st2" cx="360.5" cy="795.5" rx="25" ry="25"/>
+	<path id="path204" class="st1" d="M342.7,777.7l35.6,35.6 M378.3,777.7l-35.6,35.6"/>
+	<ellipse id="ellipse28" class="st4" cx="360.5" cy="770.5" rx="3" ry="3"/>
+</g>
+<g class="ems-electrical-element" id="Ext_0002">
+	<path id="path148" class="st3" d="M1000.5,660.5v57"/>
+	<ellipse id="ellipse206" class="st2" cx="1000.5" cy="745.5" rx="25" ry="25"/>
+	<path id="path208" class="st1" d="M982.7,727.7l35.6,35.6 M1018.3,727.7l-35.6,35.6"/>
+	<ellipse id="ellipse150" class="st4" cx="1000.5" cy="720.5" rx="3" ry="3"/>
+</g>
+<g class="ems-electrical-element" id="Ext_0003">
+	<path id="path182" class="st3" d="M1080.5,660.5v57"/>
+	<ellipse id="ellipse210" class="st2" cx="1080.5" cy="745.5" rx="25" ry="25"/>
+	<path id="path212" class="st1" d="M1062.7,727.7l35.6,35.6 M1098.3,727.7l-35.6,35.6"/>
+	<ellipse id="ellipse184" class="st4" cx="1080.5" cy="720.5" rx="3" ry="3"/>
+</g>
+<ellipse id="ellipse16" class="st5" cx="360.5" cy="600.5" rx="3" ry="3"/>
+<ellipse id="ellipse32" class="st5" cx="280.5" cy="600.5" rx="3" ry="3"/>
+<ellipse id="ellipse44" class="st5" cx="80.5" cy="320.5" rx="3" ry="3"/>
+<ellipse id="ellipse46" class="st5" cx="280.5" cy="600.5" rx="3" ry="3"/>
+<ellipse id="ellipse52" class="st5" cx="80.5" cy="240.5" rx="3" ry="3"/>
+<ellipse id="ellipse54" class="st5" cx="280.5" cy="80.5" rx="3" ry="3"/>
+<ellipse id="ellipse58" class="st5" cx="320.5" cy="80.5" rx="3" ry="3"/>
+<ellipse id="ellipse60" class="st5" cx="320.5" cy="600.5" rx="3" ry="3"/>
+<ellipse id="ellipse64" class="st5" cx="440.6" cy="600.5" rx="3" ry="3"/>
+<ellipse id="ellipse76" class="st5" cx="440.5" cy="600.5" rx="3" ry="3"/>
+<ellipse id="ellipse78" class="st5" cx="600.5" cy="320.5" rx="3" ry="3"/>
+<ellipse id="ellipse82" class="st5" cx="80.5" cy="280.7" rx="3" ry="3"/>
+<ellipse id="ellipse92" class="st5" cx="320.5" cy="80.5" rx="3" ry="3"/>
+<ellipse id="ellipse102" class="st5" cx="640.5" cy="320.5" rx="3" ry="3"/>
+<ellipse id="ellipse114" class="st5" cx="840.5" cy="440.5" rx="3" ry="3"/>
+<ellipse id="ellipse124" class="st5" cx="680.5" cy="320.5" rx="3" ry="3"/>
+<ellipse id="ellipse126" class="st5" cx="800.5" cy="440.5" rx="3" ry="3"/>
+<ellipse id="ellipse132" class="st5" cx="880.5" cy="440.5" rx="3" ry="3"/>
+<ellipse id="ellipse134" class="st5" cx="1000.5" cy="560.5" rx="3" ry="3"/>
+<ellipse id="ellipse138" class="st5" cx="1000.5" cy="560.5" rx="3" ry="3"/>
+<ellipse id="ellipse156" class="st5" cx="800.5" cy="200.5" rx="3" ry="3"/>
+<ellipse id="ellipse166" class="st5" cx="360.5" cy="80.5" rx="3" ry="3"/>
+<ellipse id="ellipse168" class="st5" cx="760.5" cy="200.5" rx="3" ry="3"/>
+<ellipse id="ellipse172" class="st5" cx="1080.5" cy="560.5" rx="3" ry="3"/>
+<ellipse id="ellipse188" class="st5" cx="840.5" cy="200.5" rx="3" ry="3"/>
+<ellipse id="ellipse190" class="st5" cx="1080.5" cy="560.5" rx="3" ry="3"/>
+<ellipse id="ellipse194" class="st5" cx="1160.5" cy="560.5" rx="3" ry="3"/>
 </svg>
