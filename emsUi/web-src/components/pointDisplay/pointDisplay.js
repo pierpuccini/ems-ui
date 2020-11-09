@@ -17,6 +17,8 @@ class PointDisplayController {
 
     constructor(maDialogHelper) {
         this.maDialogHelper = maDialogHelper;
+
+        this.enableSet = false;
     }
 
     $onChanges(changes) {
@@ -33,6 +35,7 @@ class PointDisplayController {
             this.newLoad = this.load.value * (1 - percent / 100);
         }
         this.newLoadWithSuffix = this.newLoad.toFixed(2) + this.load.textRenderer.suffix;
+        this.enableSet = true;
     }
 
     setNewLoad(event) {

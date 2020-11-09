@@ -38,7 +38,8 @@
         </div>
     </div>
     <div layout="column" layout-align="center stretch">
-        <md-button class="md-raised md-accent" ma-tr="ems.demand.set" ng-click="$ctrl.setNewLoad($event)"></md-button>
+        <md-button class="md-raised md-accent" ma-tr="ems.demand.set" ng-click="$ctrl.setNewLoad($event)"
+            ng-disabled="$ctrl.enableSet"></md-button>
     </div>
     <!-- <ma-set-point-value point="$ctrl.load"></ma-set-point-value> -->
 </div>
