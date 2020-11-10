@@ -29,13 +29,13 @@
 	<path id="path68" class="st2" d="M420.5,640.5l20,40l20-40H420.5z"/>
 	<path id="path70" class="st1" d="M440.5,620.5v20"/>
 </g>
-<path class="ems-electrical-element" id="Line_0006_0012" class="st1" d="M83.5,320.5h27c6.7,0,11.8,2.8,15.6,8.3L275,552.2c3.7,5.5,5.5,11.7,5.5,18.3v27"/>
+<path class="ems-electrical-element st1" id="Line_0006_0012" d="M83.5,320.5h27c6.7,0,11.8,2.8,15.6,8.3L275,552.2c3.7,5.5,5.5,11.7,5.5,18.3v27"/>
 <path class="ems-electrical-element" id="Bus_0012" class="st0" d="M79.5,360.5v-160"/>
-<path class="ems-electrical-element" id="Line_0012_0013" class="st1" d="M83.5,240.5h27c6.7,0,12.7-2,18-6l144-108c5.3-4,8-9.3,8-16v-27"/>
+<path class="ems-electrical-element st1" id="Line_0012_0013" d="M83.5,240.5h27c6.7,0,12.7-2,18-6l144-108c5.3-4,8-9.3,8-16v-27"/>
 <path class="ems-electrical-element" id="Bus_0013" class="st0" d="M240.5,80.5h160"/>
-<path class="ems-electrical-element" id="Line_0006_0013" class="st1" d="M320.5,83.5v514"/>
+<path class="ems-electrical-element st1" id="Line_0006_0013" d="M320.5,83.5v514"/>
 <path class="ems-electrical-element" id="Bus_0011" class="st0" d="M720.5,320.5h-160"/>
-<path class="ems-electrical-element" id="Line_0006_0011" class="st1" d="M440.5,597.5v-27c0-6.7,2.1-12.6,6.2-17.8l147.5-184.4c4.2-5.2,6.2-11.1,6.2-17.8v-27"/>
+<path class="ems-electrical-element st1" id="Line_0006_0011" d="M440.5,597.5v-27c0-6.7,2.1-12.6,6.2-17.8l147.5-184.4c4.2-5.2,6.2-11.1,6.2-17.8v-27"/>
 <g class="ems-electrical-element" id="Load_0012">
 	<path id="path80" class="st1" d="M60.5,280.5h20l-3,0.1"/>
 	<path id="path86" class="st2" d="M40.5,260.5l-40,20l40,20V260.5z"/>
@@ -57,10 +57,10 @@
 	<path id="path118" class="st2" d="M860.5,400.5l-20-40l-20,40H860.5z"/>
 	<path id="path120" class="st1" d="M840.5,420.5v-20"/>
 </g>
-<path class="ems-electrical-element" id="Line_0010_0011" class="st1" d="M680.5,323.5v27c0,6.7,1.9,12.8,5.5,18.3l69,103.4c3.7,5.5,8.9,8.3,15.5,8.3h20
+<path class="ems-electrical-element st1" id="Line_0010_0011" d="M680.5,323.5v27c0,6.7,1.9,12.8,5.5,18.3l69,103.4c3.7,5.5,8.9,8.3,15.5,8.3h20
 	c6.7,0,10-3.3,10-10v-27"/>
 <path class="ems-electrical-element" id="Bus_0009" class="st0" d="M960.5,560.5h240"/>
-<path class="ems-electrical-element" id="Line_0009_0010" class="st1" d="M880.5,443.5v27c0,6.7,3.2,11.1,9.5,13.2l101,33.7c6.3,2.1,9.5,6.5,9.5,13.2v27"/>
+<path class="ems-electrical-element st1" id="Line_0009_0010" d="M880.5,443.5v27c0,6.7,3.2,11.1,9.5,13.2l101,33.7c6.3,2.1,9.5,6.5,9.5,13.2v27"/>
 <g class="ems-electrical-element" id="Trf_0004_0009">
 	<path id="path136" class="st1" d="M1000.5,600.5v-37"/>
 	<ellipse id="ellipse142" class="st1" cx="1000.5" cy="640.5" rx="20" ry="20"/>
@@ -73,7 +73,7 @@
 	<path id="path160" class="st2" d="M820.5,160.5l-20-40l-20,40H820.5z"/>
 	<path id="path162" class="st1" d="M800.5,180.5v-20"/>
 </g>
-<path class="ems-electrical-element" id="Line_0013_0014" class="st1" d="M360.5,83.5v27c0,6.7,3.2,11.1,9.5,13.2l341,113.7c6.3,2.1,12.8,3.2,19.5,3.2h20
+<path class="ems-electrical-element st1" id="Line_0013_0014" d="M360.5,83.5v27c0,6.7,3.2,11.1,9.5,13.2l341,113.7c6.3,2.1,12.8,3.2,19.5,3.2h20
 	c6.7,0,10-3.3,10-10v-27"/>
 <g class="ems-electrical-element" id="Trf_0007_0009">
 	<path id="path170" class="st1" d="M1080.5,600.5v-37"/>
@@ -81,7 +81,7 @@
 	<ellipse id="ellipse178" class="st1" cx="1080.5" cy="620.5" rx="20" ry="20"/>
 	<ellipse id="ellipse180" class="st1" cx="1080.5" cy="640.5" rx="20" ry="20"/>
 </g>
-<path class="ems-electrical-element" id="Line_0009_0014" class="st1" d="M840.5,203.5v27c0,6.7,2.2,12.5,6.5,17.6l227,264.8c4.3,5.1,6.5,10.9,6.5,17.6v27"/>
+<path class="ems-electrical-element st1" id="Line_0009_0014" d="M840.5,203.5v27c0,6.7,2.2,12.5,6.5,17.6l227,264.8c4.3,5.1,6.5,10.9,6.5,17.6v27"/>
 <g class="ems-electrical-element" id="Load_0009">
 	<path id="path192" class="st1" d="M1160.5,580.5v-20V580.5v-17"/>
 	<path id="path198" class="st2" d="M1140.5,600.5l20,40l20-40H1140.5z"/>
