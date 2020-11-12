@@ -132,4 +132,25 @@
 <ellipse id="ellipse188" class="st5" cx="840.5" cy="200.5" rx="3" ry="3"/>
 <ellipse id="ellipse190" class="st5" cx="1080.5" cy="560.5" rx="3" ry="3"/>
 <ellipse id="ellipse194" class="st5" cx="1160.5" cy="560.5" rx="3" ry="3"/>
+<text transform="scale(0.98479129,1.0154436)" id="text572" y="191.36604" x="46.452354" style="font-style:normal;font-weight:normal;font-size:17.7698px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.444245" xml:space="preserve">
+    <tspan id="tspan574" style="stroke-width:0.444245" y="191.36604" x="46.452354" sodipodi:role="line">Bus 12</tspan>
+</text>
+<text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:17.7698px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.444245" x="374.15942" y="71.179024" id="text572-3" transform="scale(0.98479128,1.0154436)">
+    <tspan sodipodi:role="line" x="374.15942" y="71.179024" style="stroke-width:0.444245" id="tspan574-8">Bus 13</tspan>
+</text>
+<text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:17.7698px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.444245" x="865.41583" y="191.26051" id="text572-8" transform="scale(0.98479128,1.0154436)">
+    <tspan sodipodi:role="line" x="865.41583" y="191.26051" style="stroke-width:0.444245" id="tspan574-6">Bus 14</tspan>
+</text>
+<text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:17.7698px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.444245" x="1149.235" y="541.36829" id="text572-6" transform="scale(0.98479128,1.0154436)">
+        <tspan sodipodi:role="line" x="1149.235" y="541.36829" style="stroke-width:0.444245" id="tspan574-4">Bus 09</tspan>
+</text>
+<text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:17.7698px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.444245" x="896.77258" y="427.52475" id="text572-0" transform="scale(0.98479128,1.0154436)">
+        <tspan sodipodi:role="line" x="896.77258" y="427.52475" style="stroke-width:0.444245" id="tspan574-2">Bus 10</tspan>
+</text>
+<text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:17.7698px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.444245" x="695.76758" y="309.78253" id="text572-9" transform="scale(0.98479128,1.0154436)">
+        <tspan sodipodi:role="line" x="695.76758" y="309.78253" style="stroke-width:0.444245" id="tspan574-9">Bus 11</tspan>
+</text>
+<text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:17.7698px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.444245" x="465.81772" y="585.03424" id="text572-84" transform="scale(0.98479128,1.0154436)">
+    <tspan sodipodi:role="line" x="465.81772" y="585.03424" style="stroke-width:0.444245" id="tspan574-0">Bus 06</tspan>
+</text>
 </svg>
