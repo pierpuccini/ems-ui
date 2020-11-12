@@ -43,12 +43,12 @@ class PointDisplayController {
         const loadValueCopy = angular.copy(this.load.value);
         this.maDialogHelper.confirm(event, ['ems.demand.confirmChange', toMsg]).then(
             (res) => {
-                if (!this.maDialogHelper.isCancelled(res)) {
-                    console.log('revert in res');
-                    this.load.value = loadValueCopy;
-                } else {
+                if (res) {
                     console.log('set');
                     this.load.setValue(this.newLoad);
+                } else {
+                    console.log('revert in res');
+                    this.load.value = loadValueCopy;
                 }
             },
             (error) => {

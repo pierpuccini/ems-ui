@@ -40,7 +40,7 @@ class DemandOverviewController {
         if (element === 'Ext') {
             this.setFirstElem('System');
             this.element = 'System';
-        } else {
+        } else if (this.points.length) {
             this.element = el.replace('_', ' ');
             const filteredPoints = this.points.filter((point) => {
                 if (element === 'Load' && point.name === 'Cost Ranges') {
