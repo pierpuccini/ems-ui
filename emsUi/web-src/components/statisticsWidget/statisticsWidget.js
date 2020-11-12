@@ -7,7 +7,7 @@ import template from './statisticsWidget.html';
 import './statisticsWidget.css';
 
 const PRESET_AXIS_ELEMENTS = ['System', 'Bus', 'Load', 'Gen'];
-const RIGHT_AXIS_NAMES = ['Loading', 'Total demand', 'Nominal Voltage', 'Active Power', 'Active Gen', 'Reactive Gen'];
+const RIGHT_AXIS_NAMES = ['Loading', 'Total demand', 'Nominal Voltage', 'Active Power', 'Active Out', 'Reactive Out'];
 
 const PRESET_COLORS = ['#FF6600', '#FCD202', '#B0DE09', '#0D8ECF', '#2A0CD0', '#CD0D74', '#CC0000', '#00CC00', '#0000CC', '#DDDDDD', '#999999', '#333333', '#990000'];
 
